@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kim &amp; Marco in Japan 🇯🇵 — Zomer 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --paper: #f7f3ee;
+    --red: #c0392b;
+    --gold: #c9a84c;
+    --teal: #2e7d7a;
+    --teal-light: #d0e8e7;
+    --muted: #7a6e64;
+    --border: #d4ccc4;
+    --hotel-bg: #f0ebe3;
+    --hotel-accent: #8b6914;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .cover {
+    min-height: 100vh;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 40px;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 80%, rgba(192,57,43,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 80% 20%, rgba(46,125,122,0.2) 0%, transparent 60%);
+  }
+
+  .cover-kanji {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(80px, 18vw, 180px);
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    opacity: 0.12;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .cover-content { position: relative; text-align: center; z-index: 1; }
+
+  .cover-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .cover-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(52px, 10vw, 110px);
+    font-weight: 700;
+    line-height: 0.95;
+    margin-bottom: 12px;
+  }
+
+  .cover-title span { color: var(--red); }
+
+  .cover-sub {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    opacity: 0.6;
+    margin-bottom: 40px;
+  }
+
+  .cover-dates {
+    display: inline-block;
+    border: 1px solid rgba(247,243,238,0.25);
+    padding: 10px 28px;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+
+  .cover-names {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(18px, 3vw, 28px);
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: var(--paper);
+    opacity: 0.85;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .cover-family-msg {
+    margin-top: 24px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: rgba(247,243,238,0.65);
+    font-style: italic;
+  }
+
+  .cover-ornament {
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+    margin: 40px auto;
+  }
+
+  .family-note {
+    margin-top: 28px;
+    background: white;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    text-align: left;
+    border-radius: 2px;
+  }
+
+  .family-note strong { color: var(--ink); }
+
+  .fr-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--ink);
+    color: var(--gold) !important;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-left: 6px;
+    vertical-align: middle;
+    transition: background 0.15s;
+  }
+  .fr-link:hover { background: #333; }
+  .fr-link::before { content: "📡"; font-size: 10px; }
+
+  .route-strip {
+    background: var(--red);
+    color: white;
+    padding: 18px 40px;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .route-strip span { opacity: 0.5; margin: 0 12px; }
+  .route-strip strong { opacity: 1; }
+
+  .intro {
+    max-width: 820px;
+    margin: 80px auto;
+    padding: 0 40px;
+    text-align: center;
+  }
+
+  .intro h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 24px;
+  }
+
+  .intro p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--muted);
+  }
+
+  .section-header {
+    max-width: 1100px;
+    margin: 80px auto 0;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .section-header .num {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--border);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .section-header .label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .section-header h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(30px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+    min-width: 30px;
+  }
+
+  .dest-grid {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px;
+  }
+
+  .dest-card {
+    background: white;
+    padding: 36px 32px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s;
+    position: relative;
+  }
+
+  .dest-card:hover { border-left-color: var(--red); }
+
+
+  .dest-photo {
+    width: calc(100% + 64px);
+    margin: -36px -32px 20px -32px;
+    height: 180px;
+    overflow: hidden;
+    display: block;
+  }
+  .dest-photo svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .dest-card .day-badge {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .dest-card h4 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .dest-card .date {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .dest-card .activities {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+
+  .dest-card .hotel-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--teal);
+    text-transform: uppercase;
+  }
+
+  .dest-card .hotel-tag::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 1px;
+    background: var(--teal);
+  }
+
+  .dest-card .transport-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  .dest-card .highlight-box {
+    margin-top: 16px;
+    background: var(--teal-light);
+    border-left: 2px solid var(--teal);
+    padding: 12px 14px;
+    font-size: 13px;
+    color: var(--teal);
+    line-height: 1.5;
+  }
+
+  .dest-card .note-box {
+    margin-top: 12px;
+    background: #fef9ee;
+    border-left: 2px solid var(--gold);
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #8a7040;
+    line-height: 1.5;
+  }
+
+  /* HOTEL INFO BOX */
+  .hotel-info-box {
+    margin-top: 16px;
+    background: var(--hotel-bg);
+    border-top: 2px solid var(--hotel-accent);
+    padding: 14px 16px;
+    font-size: 12px;
+    color: #5a4a2a;
+    line-height: 1.6;
+  }
+
+  .hotel-info-box .hotel-info-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--hotel-accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hotel-info-box .hotel-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+  }
+
+  .hotel-info-box .pill {
+    background: rgba(139,105,20,0.12);
+    border: 1px solid rgba(139,105,20,0.25);
+    color: var(--hotel-accent);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+
+  /* TRAVEL DAYS */
+  .travel-day-card {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .travel-day-card h4 { color: var(--paper); }
+  .travel-day-card .date { border-bottom-color: rgba(255,255,255,0.1); color: rgba(247,243,238,0.5); }
+  .travel-day-card .activities { color: rgba(247,243,238,0.7); }
+  .travel-day-card .hotel-tag { color: var(--gold); }
+  .travel-day-card .hotel-tag::before { background: var(--gold); }
+  .travel-day-card .transport-tag { color: rgba(247,243,238,0.5); }
+  .travel-day-card .hotel-info-box {
+    background: rgba(255,255,255,0.07);
+    border-top-color: var(--gold);
+    color: rgba(247,243,238,0.75);
+  }
+  .travel-day-card .hotel-info-box .hotel-info-title { color: var(--gold); }
+  .travel-day-card .hotel-info-box .pill {
+    background: rgba(201,168,76,0.15);
+    border-color: rgba(201,168,76,0.3);
+    color: var(--gold);
+  }
+
+  /* HIGHLIGHTS SECTION */
+  .highlights-section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 40px;
+  }
+
+  .highlights-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .highlights-header h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    margin-bottom: 12px;
+  }
+
+  .highlights-header p {
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .highlight-card {
+    background: white;
+    padding: 32px 28px;
+    border-top: 3px solid var(--red);
+  }
+
+  .highlight-card .icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .highlight-card h4 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .highlight-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  footer {
+    background: var(--ink);
+    color: rgba(247,243,238,0.5);
+    text-align: center;
+    padding: 60px 40px;
+    margin-top: 80px;
+  }
+
+  footer .footer-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    color: var(--paper);
+    margin-bottom: 8px;
+  }
+
+  footer .footer-kanji {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 48px;
+    font-weight: 300;
+    opacity: 0.15;
+    letter-spacing: 0.3em;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  footer p { font-size: 12px; letter-spacing: 0.15em; }
+
+  .divider {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .divider hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 60px 0 0;
+  }
+
+  @media print {
+    .cover { min-height: auto; padding: 100px 60px; }
+    .dest-card, .highlight-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-kanji">日本</div>
+  <div class="cover-content">
+    <div class="cover-eyebrow">🇳🇱 Amsterdam &rarr; Tokyo 🇯🇵</div>
+    <div class="cover-title">Kim &amp; Marco<br><span>in Japan</span></div>
+    <div class="cover-sub">日本への旅 &nbsp;·&nbsp; Zomer 2026</div>
+    <div class="cover-ornament"></div>
+    <div class="cover-dates">19 Juli — 15 Augustus 2026 &nbsp;·&nbsp; 28 Dagen &nbsp;·&nbsp; 13 Bestemmingen</div>
+    <div class="cover-family-msg">Welkom familie &amp; vrienden — volg onze reis! 👋</div>
+  </div>
+</div>
+
+<!-- ROUTE STRIP -->
+<div class="route-strip">
+  <strong>Tokyo</strong><span>→</span>
+  <strong>Kyoto</strong><span>→</span>
+  <strong>Nara</strong><span>→</span>
+  <strong>Osaka</strong><span>→</span>
+  <strong>Hiroshima</strong><span>→</span>
+  <strong>Miyajima</strong><span>→</span>
+  <strong>Nagasaki</strong><span>→</span>
+  <strong>Huis Ten Bosch</strong><span>→</span>
+  <strong>Takachiho</strong><span>→</span>
+  <strong>Kurokawa</strong><span>→</span>
+  <strong>Fukuoka</strong><span>→</span>
+  <strong>Okinawa</strong><span>→</span>
+  <strong>Tokyo</strong>
+</div>
+
+<!-- INTRO -->
+<div class="intro">
+  <h2>Onze Reis</h2>
+  <p>
+    Op 19 juli 2026 vertrekken Kim en Marco voor 28 dagen naar Japan. Van de bruisende metropool Tokyo tot rustige onsen-dorpjes, van eeuwenoude tempels tot tropische stranden bij Okinawa — deze pagina laat je meereizen, of je nu thuis zit of zelf onderweg bent.
+  </p>
+  <div class="family-note">
+    💌 <strong>Voor familie &amp; vrienden:</strong> Hieronder vind je precies waar we zijn, waar we slapen en wat we doen — dag voor dag. De vluchtnummers zijn klikbaar via Flightradar24 zodat je ons live kunt volgen in de lucht!
+  </div>
+</div>
+
+
+<!-- ==================== LIVE WIDGETS ==================== -->
+<style>
+.widgets-section{max-width:1100px;margin:0 auto 20px;padding:0 40px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.widget-full{grid-column:1/-1;}
+.widget-card{background:white;border:1px solid #d4ccc4;padding:24px 28px;border-top:3px solid #c0392b;}
+.widget-title{font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a1410;margin-bottom:18px;letter-spacing:.03em;}
+.waar-active{background:#1a1410;color:#f7f3ee;padding:16px 20px;margin-bottom:10px;}
+.waar-dag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#c9a84c;margin-bottom:4px;}
+.waar-naam{font-family:Georgia,serif;font-size:22px;font-weight:700;margin-bottom:6px;}
+.waar-info{font-size:13px;color:rgba(247,243,238,0.7);line-height:1.5;}
+.waar-progress-wrap{background:#e8e0d8;height:6px;margin:10px 0 8px;}
+.waar-progress-bar{background:#c0392b;height:6px;}
+.waar-progress-label{font-size:11px;color:#7a6e64;letter-spacing:.1em;}
+.waar-msg{padding:12px 0;font-size:13px;color:#7a6e64;}
+.waar-msg strong{color:#1a1410;}
+.waar-next{padding:8px 0 0;font-size:13px;color:#7a6e64;}
+.waar-next strong{color:#1a1410;}
+.tijd-grid{display:flex;align-items:center;gap:16px;margin-bottom:12px;}
+.tijd-col{flex:1;text-align:center;}
+.tijd-label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#7a6e64;margin-bottom:6px;}
+.tijd-clock{font-family:Georgia,serif;font-size:36px;font-weight:700;color:#1a1410;line-height:1;}
+.tijd-date{font-size:12px;color:#7a6e64;margin-top:4px;}
+.tijd-sep{font-size:13px;color:#d4ccc4;font-weight:700;flex-shrink:0;}
+.tijd-diff{font-size:12px;color:#7a6e64;border-top:1px solid #d4ccc4;padding-top:10px;text-align:center;}
+.tijd-diff strong{color:#c0392b;}
+
+@media(max-width:700px){.widgets-section{grid-template-columns:1fr;padding:0 16px;}.widget-full{grid-column:1;}.tijd-clock{font-size:28px;}}
+</style>
+
+<div class="widgets-section">
+
+  <div class="widget-card" id="widget-waar">
+    <div class="widget-title">Waar zijn Kim &amp; Marco nu?</div>
+    <div id="waar-content"><div class="waar-msg">Laden...</div></div>
+  </div>
+
+  <div class="widget-card" id="widget-tijd">
+    <div class="widget-title">Tijdsverschil</div>
+    <div class="tijd-grid">
+      <div class="tijd-col">
+        <div class="tijd-label">Nederland</div>
+        <div class="tijd-clock" id="clock-nl">--:--</div>
+        <div class="tijd-date" id="date-nl">--</div>
+      </div>
+      <div class="tijd-sep">vs</div>
+      <div class="tijd-col">
+        <div class="tijd-label">Japan (JST)</div>
+        <div class="tijd-clock" id="clock-jp">--:--</div>
+        <div class="tijd-date" id="date-jp">--</div>
+      </div>
+    </div>
+    <div class="tijd-diff">Japan loopt <strong>7 uur</strong> voor op Nederland</div>
+  </div>
+
+
+
+</div>
+
+
+<script>
+(function(){
+
+var TRIP_START = new Date('2026-07-19');
+var TRIP_END   = new Date('2026-08-15');
+
+var stops = [
+  {name:'Tokyo',          dag:2,  dateStr:'20-24 jul', color:'#c0392b', hotel:'Hotel RIO Shinjuku',            desc:'Senso-ji, Disneyland, Fuji'},
+  {name:'Kyoto',          dag:7,  dateStr:'25-27 jul', color:'#c0392b', hotel:'Stay SAKURA Kyoto Matsuri',     desc:'Fushimi Inari, Arashiyama'},
+  {name:'Osaka',          dag:10, dateStr:'28-30 jul', color:'#c0392b', hotel:'Hotel Resol Trinity',           desc:'Kasteel, USJ, Dotonbori'},
+  {name:'Hiroshima',      dag:13, dateStr:'31 jul-2 aug', color:'#c0392b', hotel:'Hotel Vista',               desc:'Vredespark, Miyajima'},
+  {name:'Nagasaki',       dag:16, dateStr:'3 aug',     color:'#c0392b', hotel:'Candeo Hotel Shinchi Chinatown',desc:'Glover-tuin, Vredespark'},
+  {name:'Huis Ten Bosch', dag:17, dateStr:'4 aug',     color:'#c0392b', hotel:'Hotel Lorelei',                desc:'Holland in Japan!'},
+  {name:'Takachiho',      dag:18, dateStr:'5 aug',     color:'#c0392b', hotel:'Kean Vacation Stay',           desc:'Kloof en waterval'},
+  {name:'Kurokawa',       dag:19, dateStr:'6 aug',     color:'#c0392b', hotel:'Hotel Yusai Bekkan',           desc:'Mount Aso, onsen'},
+  {name:'Fukuoka',        dag:20, dateStr:'7 aug',     color:'#c0392b', hotel:'Avondvlucht naar Okinawa',     desc:'Yatai ramen'},
+  {name:'Okinawa',        dag:21, dateStr:'8-10 aug',  color:'#c0392b', hotel:'Hotel Strata Naha',            desc:'Strand, snorkelen'},
+  {name:'Tokyo (terug)',  dag:24, dateStr:'11-13 aug', color:'#2e7d7a', hotel:'Grand Prince Shin Takanawa',   desc:'DisneySea, vrije dag'}
+];
+
+var coords = {
+  'Tokyo':         {x:490,y:178}, 'Kyoto':        {x:418,y:230},
+  'Osaka':         {x:408,y:248}, 'Hiroshima':    {x:340,y:262},
+  'Nagasaki':      {x:228,y:318}, 'Huis Ten Bosch':{x:235,y:305},
+  'Takachiho':     {x:278,y:330}, 'Kurokawa':     {x:268,y:310},
+  'Fukuoka':       {x:248,y:298}, 'Okinawa':      {x:310,y:430},
+  'Tokyo (terug)': {x:495,y:185}
+};
+
+function getDayOfTrip(){
+  var now = new Date();
+  return Math.floor((now - TRIP_START) / 86400000) + 1;
+}
+
+function getCurrentStop(){
+  var now = new Date();
+  if(now < TRIP_START) return {phase:'before', days: Math.ceil((TRIP_START-now)/86400000)};
+  if(now > TRIP_END)   return {phase:'after'};
+  var tripDay = getDayOfTrip();
+  var cur = stops[0], nxt = null;
+  for(var i=0;i<stops.length-1;i++){
+    if(tripDay >= stops[i].dag && tripDay < stops[i+1].dag){cur=stops[i];nxt=stops[i+1];break;}
+    if(i===stops.length-2){cur=stops[stops.length-2];nxt=null;}
+  }
+  var pct = Math.min(100, Math.round((tripDay/28)*100));
+  return {phase:'during', tripDay:tripDay, cur:cur, nxt:nxt, pct:pct};
+}
+
+function renderWaar(){
+  var el = document.getElementById('waar-content');
+  if(!el) return;
+  var s = getCurrentStop();
+  if(s.phase==='before'){
+    el.innerHTML = '<div class="waar-msg">De reis vertrekt over <strong>'+s.days+' dagen</strong> op 19 juli 2026 vanaf Amsterdam Schiphol.</div>';
+    return;
+  }
+  if(s.phase==='after'){
+    el.innerHTML = '<div class="waar-msg">Kim &amp; Marco zijn weer thuis! Wat een avontuur!</div>';
+    return;
+  }
+  var h = '<div class="waar-active">';
+  h += '<div class="waar-dag">Dag '+s.tripDay+' van 28 &middot; '+s.cur.dateStr+'</div>';
+  h += '<div class="waar-naam">'+s.cur.name+'</div>';
+  h += '<div class="waar-info">'+s.cur.desc+'</div>';
+  h += '<div class="waar-info" style="margin-top:4px">Hotel: '+s.cur.hotel+'</div>';
+  h += '</div>';
+  h += '<div class="waar-progress-wrap"><div class="waar-progress-bar" style="width:'+s.pct+'%"></div></div>';
+  h += '<div class="waar-progress-label">'+s.pct+'% van de reis voltooid</div>';
+  if(s.nxt) h += '<div class="waar-next">Volgende stop: <strong>'+s.nxt.name+'</strong> (dag '+s.nxt.dag+')</div>';
+  el.innerHTML = h;
+}
+
+function renderClock(){
+  var now = new Date();
+  var nlT = now.toLocaleTimeString('nl-NL',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  var jpT = now.toLocaleTimeString('nl-NL',{timeZone:'Asia/Tokyo',    hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  var nlD = now.toLocaleDateString('nl-NL',{timeZone:'Europe/Amsterdam',weekday:'short',day:'numeric',month:'short'});
+  var jpD = now.toLocaleDateString('nl-NL',{timeZone:'Asia/Tokyo',    weekday:'short',day:'numeric',month:'short'});
+  var e = function(id){return document.getElementById(id);};
+  if(e('clock-nl')) e('clock-nl').textContent = nlT;
+  if(e('clock-jp')) e('clock-jp').textContent = jpT;
+  if(e('date-nl'))  e('date-nl').textContent  = nlD;
+  if(e('date-jp'))  e('date-jp').textContent  = jpD;
+}
+
+
+renderWaar();
+renderClock();
+setInterval(renderClock,1000);
+
+})();
+</script>
+
+
+<!-- ==================== TOKYO ==================== -->
+<div class="section-header">
+  <div class="num">01</div>
+  <div>
+    <span class="label">Dagen 2–6</span>
+    <h3>Tokyo</h3>
+  </div>
+  <div class="section-line"></div>
+</div>
+
+<div class="dest-grid">
+
+  <div class="dest-card travel-day-card">
+    <div class="day-badge">Dag 1 · 19 Juli</div>
+    <h4>Vertrek — Amsterdam naar Tokyo</h4>
+    <div class="date">Twee vluchten, één groot avontuur</div>
+    <div class="activities">De reis begint vroeg op Amsterdam Schiphol. Eerst een korte hop naar Zürich, waarna de grote sprong richting Japan volgt. Na een lange maar opgewonden vlucht land je de volgende ochtend in Tokyo Narita.</div>
+    <div class="note-box">
+      ✈ <strong>LX 737</strong> &nbsp;AMS → ZRH &nbsp;·&nbsp; vertrek 07:00 · aankomst 08:25
+      <a class="fr-link" href="https://www.flightradar24.com/data/flights/lx737" target="_blank">Volg op FR24</a><br>
+      ✈ <strong>LX 160</strong> &nbsp;ZRH → NRT &nbsp;·&nbsp; vertrek 13:05 · aankomst 09:00 (+1 dag)
+      <a class="fr-link" href="https://www.flightradar24.com/data/flights/lx160" target="_blank">Volg op FR24</a>
+    </div>
+    <div class="transport-tag">✈ Swiss International Air Lines</div>
+  </div>
+
+  <div class="dest-card travel-day-card">
+    <div class="day-badge">Dag 2 · 20 Juli</div>
+    <h4>Aankomst in Tokyo</h4>
+    <div class="date">Acclimatiseren &amp; Verkennen</div>
+    <div class="activities">Landing om 09:00 lokale tijd op Tokyo Narita (NRT). Neem de Narita Express de stad in, check in en laat je onderdompelen in het Tokyo-leven. Een kom ramen en een rustige avondwandeling is alles wat je vandaag nodig hebt.</div>
+    <div class="hotel-tag">Hotel RIO, Tokyo</div>
+    <div class="transport-tag">✈ + 🚃 Trein</div>
+    <div class="hotel-info-box">
+      <div class="hotel-info-title">🏨 Hotel RIO Shinjuku</div>
+      Gelegen in de levendige wijk Shin-Okubo (Tokyo's Koreaanse buurt), op loopafstand van meerdere metrostations. Vlak bij een 24-uurs Don Quijote en tal van restaurants. Ruime kamers voor Japanse begrippen, met gratis wifi, eigen badkamer en 24-uurs receptie.
+      <div class="hotel-pills">
+        <span class="pill">📍 Shin-Okubo / Shinjuku</span>
+        <span class="pill">🚇 6 min lopen naar station</span>
+        <span class="pill">📶 Gratis wifi</span>
+        <span class="pill">🕐 24u receptie</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 3 · 21 Juli</div>
+    <h4>Shinjuku &amp; Asakusa</h4>
+        <div class="dest-photo"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="sky_s" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c5a0"/><stop offset="100%" stop-color="#f5dfc0"/></linearGradient></defs>
+  <rect width="800" height="200" fill="url(#sky_s)"/>
+  <!-- mountains bg --> <ellipse cx="400" cy="220" rx="500" ry="100" fill="#c8956a" opacity="0.3"/>
+  <!-- pagoda main --> <rect x="340" y="60" width="120" height="100" fill="#8B1A1A"/>
+  <!-- roof layers -->
+  <polygon points="290,60 510,60 500,40 300,40" fill="#5a0f0f"/>
+  <polygon points="310,40 490,40 480,20 320,20" fill="#8B1A1A"/>
+  <polygon points="330,20 470,20 460,5 340,5" fill="#5a0f0f"/>
+  <rect x="385" y="160" width="30" height="40" fill="#5a3010"/>
+  <!-- lanterns --> <rect x="360" y="80" width="10" height="20" rx="3" fill="#E8A020" opacity="0.9"/>
+  <rect x="430" y="80" width="10" height="20" rx="3" fill="#E8A020" opacity="0.9"/>
+  <!-- gate left --> <rect x="160" y="80" width="15" height="100" fill="#c0392b"/>
+  <rect x="200" y="80" width="15" height="100" fill="#c0392b"/>
+  <rect x="150" y="78" width="80" height="12" fill="#c0392b"/>
+  <rect x="155" y="65" width="70" height="10" fill="#c0392b"/>
+  <!-- gate right --> <rect x="580" y="80" width="15" height="100" fill="#c0392b"/>
+  <rect x="620" y="80" width="15" height="100" fill="#c0392b"/>
+  <rect x="570" y="78" width="80" height="12" fill="#c0392b"/>
+  <rect x="575" y="65" width="70" height="10" fill="#c0392b"/>
+  <!-- people silhouettes --> <ellipse cx="250" cy="185" rx="8" ry="15" fill="#2a1a0a" opacity="0.6"/>
+  <ellipse cx="270" cy="183" rx="7" ry="13" fill="#2a1a0a" opacity="0.6"/>
+  <ellipse cx="540" cy="185" rx="8" ry="15" fill="#2a1a0a" opacity="0.6"/>
+  <!-- ground --> <rect x="0" y="180" width="800" height="20" fill="#d4a875" opacity="0.5"/>
+  <!-- cherry blossoms --> <circle cx="120" cy="100" r="35" fill="#f9c8d0" opacity="0.7"/>
+  <circle cx="680" cy="95" r="40" fill="#f9c8d0" opacity="0.7"/>
+  <rect x="113" y="130" width="8" height="70" fill="#7a4a20"/>
+  <rect x="673" y="130" width="8" height="70" fill="#7a4a20"/>
+</svg></div>
+    <div class="date">Tokyo per Metro</div>
+    <div class="activities">Twee iconische gezichten van Tokyo op één dag. Begin in Asakusa bij de eeuwenoude Senso-ji Tempel in de vroege ochtend, en trek daarna naar Shinjuku voor de elektrische straatjes, de Golden Gai-steegjes en de Kabukicho-sfeer.</div>
+    <div class="highlight-box">🏯 <strong>Senso-ji Tempel</strong> — Tokyo's oudste boeddhistische tempel. Kom vóór 08:00 uur voor een rustige sfeer. De Nakamise winkelstraat biedt prachtig traditioneel ambacht.</div>
+    <div class="hotel-tag">Hotel RIO, Tokyo</div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 4 · 22 Juli</div>
+    <h4>Shibuya, Harajuku &amp; Meiji Schrijn</h4>
+    <div class="date">Cultuur &amp; Koopmanschap</div>
+    <div class="activities">Begin bij het serene Meiji Schrijn midden in het bos, duik dan de Takeshita Straat van Harajuku en de designerboetieks van Omotesando in, en sluit af bij de wereldberoemde Shibuya Crossing.</div>
+    <div class="highlight-box">🦺 <strong>Meiji Schrijn</strong> — Een bebost shinto-schrijn gewijd aan keizer Meiji. Het rustige bos van 70 hectare is werelden verwijderd van de drukte van de stad buiten de poorten.</div>
+    <div class="hotel-tag">Hotel RIO, Tokyo</div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 5 · 23 Juli</div>
+    <h4>Tokyo Disneyland</h4>
+    <div class="date">Een Dag vol Magie</div>
+    <div class="activities">Tokyo Disneyland wordt consequent gerangschikt als één van de beste Disney-parken ter wereld — onberispelijk, innovatief en onvergetelijk. Reserveer FastPass-tickets van tevoren voor de populairste attracties.</div>
+    <div class="note-box">💡 Het park is na zonsondergang bijzonder spectaculair. Blijf voor de nachtparade en het vuurwerk — unieke Japanse Disney-magie.</div>
+    <div class="hotel-tag">Hotel RIO, Tokyo</div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 6 · 24 Juli</div>
+    <h4>Rondleiding Mount Fuji</h4>
+        <div class="dest-photo"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky_f" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a8c8e8"/><stop offset="60%" stop-color="#d4eaf7"/><stop offset="100%" stop-color="#e8f4fc"/></linearGradient>
+    <linearGradient id="lake_f" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#b8d8ee"/><stop offset="100%" stop-color="#8ab8d8"/></linearGradient>
+  </defs>
+  <rect width="800" height="200" fill="url(#sky_f)"/>
+  <!-- clouds --> <ellipse cx="650" cy="40" rx="80" ry="20" fill="white" opacity="0.8"/>
+  <ellipse cx="150" cy="55" rx="60" ry="15" fill="white" opacity="0.7"/>
+  <!-- Fuji mountain --> <polygon points="400,10 180,160 620,160" fill="#e8e0da"/>
+  <polygon points="400,10 340,65 460,65" fill="white"/>
+  <polygon points="400,10 355,55 445,55" fill="white" opacity="0.9"/>
+  <!-- mountain shading --> <polygon points="400,10 180,160 310,160" fill="#c8bfb8" opacity="0.4"/>
+  <!-- treeline --> <rect x="0" y="150" width="800" height="15" fill="#4a7a3a" opacity="0.8"/>
+  <!-- lake --> <ellipse cx="400" cy="185" rx="380" ry="22" fill="url(#lake_f)"/>
+  <!-- reflection --> <polygon points="400,200 330,175 470,175" fill="#a0c0d8" opacity="0.5"/>
+  <!-- foreground trees --> <rect x="50" y="130" width="10" height="55" fill="#3a5a2a"/>
+  <polygon points="55,90 30,135 80,135" fill="#4a7a3a"/>
+  <rect x="730" y="125" width="10" height="55" fill="#3a5a2a"/>
+  <polygon points="735,85 710,130 760,130" fill="#4a7a3a"/>
+</svg></div>
+    <div class="date">Japans Heilige Berg</div>
+    <div class="activities">Sluit je aan bij een begeleide dagtour naar de Fuji — Japan's meest iconische landmark en UNESCO Werelderfgoed. Bezoek het Fuji Vijf Meren-gebied en bestijg, als de omstandigheden het toelaten, het 5e Station op 2.300 m voor adembenemende uitzichten.</div>
+    <div class="highlight-box">🗻 <strong>Mount Fuji</strong> — Met 3.776 m is Fuji Japan's hoogste berg en een heilig symbool. De mooiste uitzichten zijn vaak bij Meer Kawaguchi, vooral bij zonsopkomst met de weerspiegeling in het stille water.</div>
+    <div class="hotel-tag">Hotel RIO, Tokyo</div>
+  </div>
+
+</div>
+
+<!-- ==================== KYOTO ==================== -->
+<div class="divider"><hr></div>
+<div class="section-header">
+  <div class="num">02</div>
+  <div>
+    <span class="label">Dagen 7–9</span>
+    <h3>Kyoto</h3>
+  </div>
+  <div class="section-line"></div>
+</div>
+
+<div class="dest-grid">
+
+  <div class="dest-card travel-day-card">
+    <div class="day-badge">Dag 7 · 25 Juli</div>
+    <h4>Shinkansen naar Kyoto</h4>
+    <div class="date">De Kogeltrein-ervaring</div>
+    <div class="activities">Glij naar het zuidwesten op de Shinkansen — één van de grote reiservaring en — terwijl Japan's landschap voorbijschuift op 320 km/u. Kom aan in Japan's oude hoofdstad en check in in het hart van de stad.</div>
+    <div class="hotel-tag">Stay SAKURA Kyoto Matsuri</div>
+    <div class="transport-tag">🚅 Shinkansen</div>
+    <div class="hotel-info-box">
+      <div class="hotel-info-title">🏨 Stay SAKURA Kyoto Matsuri</div>
+      Centraal gelegen appartement-hotel op 15 minuten lopen van Kyoto Station en op steenworp afstand van Kyoto Aquarium en Ryukoku Museum. Ruime kamers met kitchenette (magnetron, koelkast, kookplaat), gratis wifi en muntwasmachine in het gebouw. Een rustige, residentiële omgeving — ideaal om Japan als een local te beleven.
+      <div class="hotel-pills">
+        <span class="pill">📍 Shimogyo, Kyoto</span>
+        <span class="pill">🚇 15 min lopen naar Kyoto Station</span>
+        <span class="pill">🍳 Kitchenette aanwezig</span>
+        <span class="pill">👨‍👩‍👧 Gezinsvriendelijk</span>
+        <span class="pill">🌙 Stille buurt</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 8 · 26 Juli</div>
+    <h4>Fushimi Inari &amp; Tempels</h4>
+        <div class="dest-photo"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="sky_fi" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2d1a0e"/><stop offset="100%" stop-color="#7a3a1a"/></linearGradient></defs>
+  <rect width="800" height="200" fill="url(#sky_fi)"/>
+  <!-- forest bg --> <rect x="0" y="80" width="800" height="120" fill="#1a3a1a" opacity="0.7"/>
+  <!-- torii gates tunnel - perspective -->
+  <g opacity="0.95">
+    <!-- far gates (small) -->
+    <rect x="370" y="50" width="6" height="130" fill="#c0392b"/><rect x="424" y="50" width="6" height="130" fill="#c0392b"/>
+    <rect x="362" y="48" width="76" height="10" fill="#c0392b"/><rect x="365" y="40" width="70" height="7" fill="#922b21"/>
+    <!-- mid gates -->
+    <rect x="330" y="35" width="9" height="150" fill="#c0392b"/><rect x="461" y="35" width="9" height="150" fill="#c0392b"/>
+    <rect x="320" y="33" width="130" height="13" fill="#c0392b"/><rect x="323" y="22" width="124" height="9" fill="#922b21"/>
+    <!-- near gates -->
+    <rect x="270" y="15" width="14" height="170" fill="#c0392b"/><rect x="516" y="15" width="14" height="170" fill="#c0392b"/>
+    <rect x="255" y="12" width="175" height="17" fill="#c0392b"/><rect x="258" y="0" width="169" height="11" fill="#922b21"/>
+    <!-- closest partial gates -->
+    <rect x="180" y="0" width="18" height="200" fill="#c0392b" opacity="0.85"/>
+    <rect x="602" y="0" width="18" height="200" fill="#c0392b" opacity="0.85"/>
+  </g>
+  <!-- ground path --> <rect x="350" y="160" width="100" height="40" fill="#c8a870" opacity="0.6"/>
+  <polygon points="300,200 500,200 430,160 370,160" fill="#b89860" opacity="0.5"/>
+  <!-- silhouette walkers --> <ellipse cx="400" cy="175" rx="6" ry="14" fill="#1a0a00" opacity="0.8"/>
+  <ellipse cx="415" cy="178" rx="5" ry="12" fill="#1a0a00" opacity="0.7"/>
+  <!-- kanji on gate --> <text x="398" y="110" font-size="9" fill="white" opacity="0.6" text-anchor="middle" font-family="serif">奉納</text>
+</svg></div>
+    <div class="date">Duizenden Torii-Poorten</div>
+    <div class="activities">Wandel het bergpad door duizenden vermiljoenrode torii-poorten bij Fushimi Inari Taisha — één van Japan's meest gefotografeerde bezienswaardigheden. Breng de middag door in het historische Higashiyama-tempeldistrict van Kyoto.</div>
+    <div class="highlight-box">⛩️ <strong>Fushimi Inari</strong> — Het volledige pad duurt 2–3 uur. Ga vroeg in de ochtend of laat in de middag om de drukte te vermijden en het magische licht door de poorten te fotograferen.</div>
+    <div class="hotel-tag">Stay SAKURA Kyoto Matsuri</div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 9 · 27 Juli</div>
+    <h4>Arashiyama &amp; Kinkaku-ji</h4>
+        <div class="dest-photo"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="sky_b" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a8c888"/><stop offset="100%" stop-color="#c8e8a0"/></linearGradient></defs>
+  <rect width="800" height="200" fill="url(#sky_b)"/>
+  <!-- bamboo stalks - many layers -->
+  <g opacity="0.4">
+    <rect x="20" y="0" width="12" height="200" fill="#5a8a2a" rx="3"/>
+    <rect x="60" y="0" width="10" height="200" fill="#6a9a3a" rx="3"/>
+    <rect x="700" y="0" width="12" height="200" fill="#5a8a2a" rx="3"/>
+    <rect x="740" y="0" width="10" height="200" fill="#6a9a3a" rx="3"/>
+  </g>
+  <g opacity="0.7">
+    <rect x="90" y="0" width="14" height="200" fill="#4a7a1a" rx="4"/>
+    <rect x="130" y="0" width="12" height="200" fill="#5a8a2a" rx="4"/>
+    <rect x="640" y="0" width="14" height="200" fill="#4a7a1a" rx="4"/>
+    <rect x="675" y="0" width="12" height="200" fill="#5a8a2a" rx="4"/>
+  </g>
+  <!-- main stalks -->
+  <rect x="170" y="0" width="18" height="200" fill="#3a6a0a" rx="5"/>
+  <rect x="215" y="0" width="16" height="200" fill="#4a7a1a" rx="5"/>
+  <rect x="260" y="0" width="18" height="200" fill="#5a8a2a" rx="5"/>
+  <rect x="310" y="0" width="15" height="200" fill="#3a6a0a" rx="5"/>
+  <rect x="475" y="0" width="18" height="200" fill="#4a7a1a" rx="5"/>
+  <rect x="520" y="0" width="16" height="200" fill="#3a6a0a" rx="5"/>
+  <rect x="560" y="0" width="18" height="200" fill="#5a8a2a" rx="5"/>
+  <rect x="600" y="0" width="15" height="200" fill="#4a7a1a" rx="5"/>
+  <!-- segments/nodes -->
+  <g fill="#2a5a00" opacity="0.5">
+    <rect x="170" y="40" width="18" height="3"/><rect x="170" y="90" width="18" height="3"/><rect x="170" y="140" width="18" height="3"/>
+    <rect x="260" y="50" width="18" height="3"/><rect x="260" y="105" width="18" height="3"/><rect x="260" y="155" width="18" height="3"/>
+    <rect x="520" y="45" width="16" height="3"/><rect x="520" y="95" width="16" height="3"/><rect x="520" y="148" width="16" height="3"/>
+  </g>
+  <!-- leaves -->
+  <g fill="#4a8a10" opacity="0.6">
+    <ellipse cx="185" cy="30" rx="25" ry="8" transform="rotate(-30 185 30)"/>
+    <ellipse cx="275" cy="45" rx="28" ry="7" transform="rotate(25 275 45)"/>
+    <ellipse cx="535" cy="35" rx="26" ry="8" transform="rotate(-20 535 35)"/>
+    <ellipse cx="615" cy="50" rx="24" ry="7" transform="rotate(35 615 50)"/>
+  </g>
+  <!-- path -->  <ellipse cx="400" cy="190" rx="60" ry="12" fill="#c8a870" opacity="0.5"/>
+  <rect x="370" y="100" width="60" height="100" fill="#b89850" opacity="0.25"/>
+  <!-- light beam --> <polygon points="370,0 430,0 460,200 340,200" fill="white" opacity="0.06"/>
+  <!-- person silhouette --> <ellipse cx="400" cy="175" rx="7" ry="16" fill="#2a1a00" opacity="0.7"/>
+</svg></div>
+    <div class="date">Bamboe, Goud &amp; Rivier</div>
+    <div class="activities">Wandel door het magische bamboebos in Arashiyama, bezoek de Tenryu-ji tempeltuin en steek de iconische Togetsukyo Brug over. Bewonder 's middags het Gouden Paviljoen — Kinkaku-ji — schitterend op zijn spiegelvijver.</div>
+    <div class="highlight-box">🎋 <strong>Arashiyama Bamboebos</strong> — Een van Japan's meest buitenaardse landschappen. Het ritselen van bamboe is aangewezen als één van Japan's 100 Geluidslandschappen. Bezoek bij zonsopgang voor een etherische ervaring.</div>
+    <div class="hotel-tag">Stay SAKURA Kyoto Matsuri</div>
+  </div>
+
+</div>
+
+<!-- ==================== NARA & OSAKA ==================== -->
+<div class="divider"><hr></div>
+<div class="section-header">
+  <div class="num">03</div>
+  <div>
+    <span class="label">Dagen 10–12</span>
+    <h3>Nara &amp; Osaka</h3>
+  </div>
+  <div class="section-line"></div>
+</div>
+
+<div class="dest-grid">
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 10 · 28 Juli</div>
+    <h4>Nara Park &amp; Osaka Avond</h4>
+        <div class="dest-photo"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="sky_n" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#c8e8f8"/></linearGradient></defs>
+  <rect width="800" height="200" fill="url(#sky_n)"/>
+  <!-- clouds --> <ellipse cx="200" cy="35" rx="90" ry="22" fill="white" opacity="0.85"/>
+  <ellipse cx="600" cy="45" rx="70" ry="18" fill="white" opacity="0.8"/>
+  <!-- Todai-ji temple bg --> <rect x="300" y="60" width="200" height="100" fill="#8B6914" opacity="0.7"/>
+  <polygon points="250,60 550,60 540,40 260,40" fill="#6a4a10" opacity="0.8"/>
+  <polygon points="280,40 520,40 510,20 290,20" fill="#8B6914" opacity="0.7"/>
+  <!-- roof details --> <rect x="300" y="58" width="200" height="4" fill="#5a3a00"/>
+  <!-- grass --> <rect x="0" y="155" width="800" height="45" fill="#7ab840"/>
+  <!-- deer 1 --> <g transform="translate(150,120)">
+    <ellipse cx="0" cy="0" rx="30" ry="18" fill="#c8906a"/>
+    <ellipse cx="28" cy="-12" rx="14" ry="12" fill="#c8906a"/>
+    <circle cx="38" cy="-18" r="7" fill="#b87858"/>
+    <line x1="35" y1="-12" x2="37" y2="-5" stroke="#b87858" stroke-width="3"/>
+    <line x1="-15" y1="12" x2="-15" y2="28" stroke="#b87858" stroke-width="3.5"/>
+    <line x1="5" y1="14" x2="5" y2="30" stroke="#b87858" stroke-width="3.5"/>
+    <line x1="20" y1="14" x2="18" y2="30" stroke="#b87858" stroke-width="3"/>
+    <line x1="28" y1="12" x2="30" y2="28" stroke="#b87858" stroke-width="3"/>
+    <circle cx="40" cy="-20" r="2.5" fill="#2a1a0a"/>
+    <!-- antlers --> <line x1="37" y1="-23" x2="32" y2="-35" stroke="#7a4a20" stroke-width="2"/>
+    <line x1="32" y1="-35" x2="25" y2="-42" stroke="#7a4a20" stroke-width="2"/>
+    <line x1="32" y1="-35" x2="37" y2="-43" stroke="#7a4a20" stroke-width="2"/>
+  </g>
+  <!-- deer 2 --> <g transform="translate(580,130)">
+    <ellipse cx="0" cy="0" rx="25" ry="15" fill="#d09a74"/>
+    <ellipse cx="22" cy="-10" rx="12" ry="10" fill="#d09a74"/>
+    <circle cx="30" cy="-16" r="6" fill="#c08464"/>
+    <line x1="-12" y1="10" x2="-12" y2="24" stroke="#c08464" stroke-width="3"/>
+    <line x1="5" y1="12" x2="5" y2="26" stroke="#c08464" stroke-width="3"/>
+    <line x1="16" y1="11" x2="15" y2="25" stroke="#c08464" stroke-width="3"/>
+    <circle cx="32" cy="-18" r="2" fill="#2a1a0a"/>
+  </g>
+  <!-- deer 3 small --> <g transform="translate(420,145)">
+    <ellipse cx="0" cy="0" rx="18" ry="11" fill="#c8906a"/>
+    <ellipse cx="16" cy="-7" rx="9" ry="8" fill="#c8906a"/>
+    <circle cx="22" cy="-11" r="5" fill="#b87858"/>
+    <line x1="-8" y1="8" x2="-8" y2="18" stroke="#b87858" stroke-width="2.5"/>
+    <line x1="4" y1="9" x2="4" y2="19" stroke="#b87858" stroke-width="2.5"/>
+    <line x1="12" y1="8" x2="12" y2="18" stroke="#b87858" stroke-width="2.5"/>
+  </g>
+  <!-- person feeding --> <ellipse cx="340" cy="148" rx="8" ry="18" fill="#3a5a8a" opacity="0.8"/>
+  <circle cx="340" cy="128" r="7" fill="#d4956a" opacity="0.8"/>
+  <!-- trees --> <rect x="50" y="80" width="10" height="75" fill="#5a3a10"/>
+  <circle cx="55" cy="65" r="30" fill="#4a8a20" opacity="0.8"/>
+  <rect x="720" y="85" width="10" height="70" fill="#5a3a10"/>
+  <circle cx="725" cy="70" r="28" fill="#4a8a20" opacity="0.8"/>
+</svg></div>
+    <div class="date">Herten, Tempels &amp; Straateten</div>
+    <div class="activities">Breng de ochtend door in Nara Park, waar meer dan 1.200 wilde sikaherten vrij rondlopen tussen oude tempels. Bezoek Todai-ji, met Japan's grootste bronzen boeddha. Neem dan de trein naar Osaka voor een levendige eerste avond in Dotonbori.</div>
+    <div class="highlight-box">🦌 <strong>Nara Park</strong> — Japan's eerste nationale park. De herten worden beschouwd als heilige boodschappers van de goden. Koop shika senbei (hertenkoekjes) om ze te voeren — wees voorbereid op enthousiaste aandacht!</div>
+    <div class="hotel-tag">Hotel Resol Trinity, Osaka</div>
+    <div class="transport-tag">🚃 Trein</div>
+    <div class="hotel-info-box">
+      <div class="hotel-info-title">🏨 Hotel Resol Trinity Osaka</div>
+      Modern stadshotel in het zakendistrict van Osaka, op loopafstand van meerdere metrolijnen naar Umeda, Shinsaibashi en Namba. Het hotel combineert strak modern design met Japanse warmte — gasten omschrijven het als een "ryokan-gevoel in de stad". Beschikt over een publiek bad (onsen-stijl), ontbijtbuffet (Japans &amp; Westers) en vriendelijk personeel.
+      <div class="hotel-pills">
+        <span class="pill">📍 Chuo-ku, Osaka</span>
+        <span class="pill">🚇 5 min lopen naar metro</span>
+        <span class="pill">♨️ Publiek bad aanwezig</span>
+        <span class="pill">🍳 Ontbijtbuffet</span>
+        <span class="pill">📶 Gratis wifi</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 11 · 29 Juli</div>
+    <h4>Osaka Kasteel &amp; Dotonbori</h4>
+        <div class="dest-photo"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="sky_o" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#d0ecf8"/></linearGradient></defs>
+  <rect width="800" height="200" fill="url(#sky_o)"/>
+  <!-- castle base stone walls -->
+  <rect x="250" y="130" width="300" height="70" fill="#8a8070"/>
+  <rect x="270" y="110" width="260" height="30" fill="#9a9080"/>
+  <!-- stone texture --> <line x1="250" y1="145" x2="550" y2="145" stroke="#7a7060" stroke-width="1.5" opacity="0.6"/>
+  <line x1="250" y1="158" x2="550" y2="158" stroke="#7a7060" stroke-width="1.5" opacity="0.6"/>
+  <!-- main tower -->
+  <rect x="310" y="55" width="180" height="80" fill="#1a3a1a"/>
+  <rect x="320" y="40" width="160" height="25" fill="#2a4a2a"/>
+  <!-- windows --> <rect x="330" y="65" width="20" height="25" fill="#8a9a3a" opacity="0.6"/>
+  <rect x="370" y="65" width="20" height="25" fill="#8a9a3a" opacity="0.6"/>
+  <rect x="450" y="65" width="20" height="25" fill="#8a9a3a" opacity="0.6"/>
+  <!-- roof layers -->
+  <polygon points="280,55 520,55 510,35 290,35" fill="#1a2a1a"/>
+  <polygon points="300,35 500,35 490,18 310,18" fill="#2a4a2a"/>
+  <polygon points="320,18 480,18 470,5 330,5" fill="#1a2a1a"/>
+  <!-- gold finial --> <polygon points="400,0 393,8 407,8" fill="#c9a84c"/>
+  <rect x="396" y="5" width="8" height="6" fill="#c9a84c"/>
+  <!-- green roof curves --> <path d="M280,55 Q310,45 340,55" fill="none" stroke="#3a6a3a" stroke-width="3"/>
+  <path d="M460,55 Q490,45 520,55" fill="none" stroke="#3a6a3a" stroke-width="3"/>
+  <!-- moat/water --> <rect x="100" y="175" width="600" height="25" fill="#4a8ab8" opacity="0.6"/>
+  <!-- cherry trees --> <rect x="130" y="110" width="10" height="65" fill="#5a3a10"/>
+  <circle cx="135" cy="90" r="35" fill="#f9c0cc" opacity="0.8"/>
+  <rect x="645" y="115" width="10" height="60" fill="#5a3a10"/>
+  <circle cx="650" cy="95" r="32" fill="#f9c0cc" opacity="0.8"/>
+  <!-- grass -->  <rect x="0" y="170" width="800" height="30" fill="#5a9a2a" opacity="0.6"/>
+  <!-- visitors --> <ellipse cx="220" cy="168" rx="6" ry="14" fill="#3a4a8a" opacity="0.7"/>
+  <ellipse cx="570" cy="165" rx="6" ry="14" fill="#8a3a3a" opacity="0.7"/>
+</svg></div>
+    <div class="date">Geschiedenis &amp; Culinaire Hoofdstad</div>
+    <div class="activities">Verken het prachtige Osaka Kasteel en het omliggende park, en breng daarna de middag en avond door in Dotonbori — Osaka's legendarische uitgaans- en eetdistricten. Proef takoyaki, okonomiyaki en kushikatsu.</div>
+    <div class="highlight-box">🏯 <strong>Osaka Kasteel</strong> — Gebouwd in 1583 door Toyotomi Hideyoshi. De bovenste verdieping van de toren biedt een panoramisch uitzicht over de stad. De omringende gracht en het park van 43 hectare zijn prachtig.</div>
+    <div class="hotel-tag">Hotel Resol Trinity, Osaka</div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 12 · 30 Juli</div>
+    <h4>Universal Studios Japan</h4>
+    <div class="date">De Tovenaarswereld &amp; Meer</div>
+    <div class="activities">Een volle dag in één van Azië's beste pretparken. De Tovenaarswereld van Harry Potter, Super Nintendo World en de iconische Hollywood-attracties wachten op je. Boek Express-passen van tevoren voor de beste ervaring.</div>
+    <div class="note-box">💡 Super Nintendo World is een USJ-exclusiviteit in Azië. De Mario Kart-rit en het Donkey Kong Country-gebied zijn een must — reserveer toegang via de USJ-app.</div>
+    <div class="hotel-tag">Hotel Resol Trinity, Osaka</div>
+  </div>
+
+</div>
+
+<!-- ==================== HIROSHIMA & MIYAJIMA ==================== -->
+<div class="divider"><hr></div>
+<div class="section-header">
+  <div class="num">04</div>
+  <div>
+    <span class="label">Dagen 13–15</span>
+    <h3>Hiroshima &amp; Miyajima</h3>
+  </div>
+  <div class="section-line"></div>
+</div>
+
+<div class="dest-grid">
+
+  <div class="dest-card travel-day-card">
+    <div class="day-badge">Dag 13 · 31 Juli</div>
+    <h4>Reis naar Hiroshima</h4>
+    <div class="date">Richting het Westen</div>
+    <div class="activities">Reis westwaarts langs de Sanyo-kust naar één van Japan's meest historisch belangrijke steden. Check in in het hotel en verken 's avonds de Peace Boulevard langs de rivier.</div>
+    <div class="hotel-tag">Hotel Vista, Hiroshima</div>
+    <div class="transport-tag">🚅 Shinkansen</div>
+    <div class="hotel-info-box">
+      <div class="hotel-info-title">🏨 Hotel Vista Hiroshima</div>
+      Modern stadshotel centraal gelegen op 10 minuten lopen van zowel Hiroshima Kasteel als het Vredespark. Direct toegang vanuit de lobby naar een aangrenzende 7-Eleven. Verrassend ruime kamers voor Japanse begrippen, onberispelijk schoon en voorzien van een goed ontbijtbuffet (Japans &amp; Westers). Gasten prijzen het vriendelijke en behulpzame personeel.
+      <div class="hotel-pills">
+        <span class="pill">📍 Naka Ward, Hiroshima</span>
+        <span class="pill">🏯 10 min lopen naar Vredespark</span>
+        <span class="pill">🏪 Direct naast 7-Eleven</span>
+        <span class="pill">🍳 Ontbijtbuffet</span>
+        <span class="pill">⭐ 9.5/10 locatie</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 14 · 1 Augustus</div>
+    <h4>Vredespark &amp; Museum</h4>
+    <div class="date">Een Dag van Bezinning</div>
+    <div class="activities">Bezoek het Hiroshima Vredesherdenkingspark en zijn indrukwekkende museum — een diepgaand getuigenis van veerkracht en de hoop op een kernwapenvrije wereld. De Atoombom Koepel, een UNESCO Werelderfgoed, staat als een blijvende herinnering.</div>
+    <div class="highlight-box">🕊️ <strong>Hiroshima Vredesgedenkteken</strong> — Reken minstens 3–4 uur voor het museum. De Vredesvlam brandt onafgebroken sinds 1964 en zal pas worden gedoofd wanneer alle kernwapens ter wereld zijn vernietigd.</div>
+    <div class="hotel-tag">Hotel Vista, Hiroshima</div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 15 · 2 Augustus</div>
+    <h4>Eiland Miyajima</h4>
+        <div class="dest-photo"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky_m" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff7043"/><stop offset="40%" stop-color="#ff9a6c"/><stop offset="100%" stop-color="#ffc49a"/></linearGradient>
+    <linearGradient id="sea_m" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4a8ab8"/><stop offset="100%" stop-color="#2a6a98"/></linearGradient>
+  </defs>
+  <rect width="800" height="200" fill="url(#sky_m)"/>
+  <!-- sun --> <circle cx="400" cy="70" r="35" fill="#ffdd44" opacity="0.9"/>
+  <circle cx="400" cy="70" r="28" fill="#ffee88"/>
+  <!-- mountains bg --> <polygon points="0,120 200,60 400,100 600,50 800,90 800,200 0,200" fill="#3a6a3a" opacity="0.5"/>
+  <!-- sea --> <rect x="0" y="130" width="800" height="70" fill="url(#sea_m)"/>
+  <!-- water shimmer --> <line x1="0" y1="145" x2="800" y2="145" stroke="white" stroke-width="1" opacity="0.2"/>
+  <line x1="0" y1="158" x2="800" y2="158" stroke="white" stroke-width="1" opacity="0.15"/>
+  <!-- torii gate -->
+  <rect x="355" y="40" width="18" height="155" fill="#c0392b"/>
+  <rect x="427" y="40" width="18" height="155" fill="#c0392b"/>
+  <rect x="330" y="38" width="140" height="18" fill="#c0392b"/>
+  <rect x="320" y="30" width="160" height="12" fill="#922b21"/>
+  <rect x="348" y="56" width="10" height="18" fill="#7a1a10"/>
+  <rect x="442" y="56" width="10" height="18" fill="#7a1a10"/>
+  <!-- reflection in water --> <rect x="355" y="140" width="18" height="60" fill="#c0392b" opacity="0.4"/>
+  <rect x="427" y="140" width="18" height="60" fill="#c0392b" opacity="0.4"/>
+  <rect x="330" y="136" width="140" height="10" fill="#c0392b" opacity="0.3"/>
+  <!-- shrine buildings --> <rect x="150" y="100" width="100" height="50" fill="#8B6914" opacity="0.7"/>
+  <polygon points="130,100 270,100 260,82 140,82" fill="#6a4a10" opacity="0.8"/>
+  <rect x="530" y="105" width="90" height="45" fill="#8B6914" opacity="0.6"/>
+  <polygon points="515,105 635,105 625,88 525,88" fill="#6a4a10" opacity="0.7"/>
+  <!-- boats --> <ellipse cx="230" cy="165" rx="30" ry="7" fill="#d4a870" opacity="0.8"/>
+  <rect x="225" y="145" width="5" height="20" fill="#8a6030"/>
+</svg></div>
+    <div class="date">De Drijvende Torii-Poort</div>
+    <div class="activities">Vaar over naar het heilige eiland Miyajima. De iconische vermiljoenrode Itsukushima torii-poort lijkt te drijven op het water bij vloed. Wandel over de Berg Misen door eeuwenoud cederwoud voor weids uitzicht over de Seto Binnenzee.</div>
+    <div class="highlight-box">⛩️ <strong>Itsukushima Schrijn</strong> — Één van Japan's Drie Uitzichten. De drijvende poort is bijzonder magisch bij zonsondergang en verlicht 's nachts. Controleer de getijden voordat je gaat.</div>
+    <div class="hotel-tag">Hotel Vista, Hiroshima</div>
+    <div class="transport-tag">🚃 Trein + ⛴️ Veerboot</div>
+  </div>
+
+</div>
+
+<!-- ==================== NAGASAKI & HUIS TEN BOSCH ==================== -->
+<div class="divider"><hr></div>
+<div class="section-header">
+  <div class="num">05</div>
+  <div>
+    <span class="label">Dagen 16–17</span>
+    <h3>Nagasaki &amp; Huis Ten Bosch</h3>
+  </div>
+  <div class="section-line"></div>
+</div>
+
+<div class="dest-grid">
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 16 · 3 Augustus</div>
+    <h4>Nagasaki</h4>
+    <div class="date">Poort naar de Wereld</div>
+    <div class="activities">Japan's meest internationale stad — een plek waar Portugese, Nederlandse en Chinese culturen eeuwenlang vermengd zijn. Bezoek het Nagasaki Vredespark, de Glover-tuin en het historische Dejima-district.</div>
+    <div class="highlight-box">🏛️ <strong>Glover-tuin</strong> — Het landgoed op de heuvel van de Schotse koopman Thomas Glover, die hielp Japan te moderniseren. De tuin biedt spectaculair uitzicht over de haven van Nagasaki.</div>
+    <div class="transport-tag">🚃 + 🚗 Trein &amp; Auto</div>
+    <div class="hotel-tag">Candeo Hotel Nagasaki Shinchi Chinatown</div>
+    <div class="hotel-info-box">
+      <div class="hotel-info-title">🏨 Candeo Hotel Nagasaki Shinchi Chinatown</div>
+      Modern designhotel in het hart van Nagasaki, gelegen direct naast het historische Chinatown (Shinchi) — het oudste Chinatown van Japan. Op loopafstand van de Dejima-wijk, de tramhaltes en diverse restaurants. Candeo Hotels staan bekend om hun uitstekende rooftop onsen met uitzicht over de stad. Ideale uitvalsbasis voor een dagje Nagasaki.
+      <div class="hotel-pills">
+        <span class="pill">📍 Shinchi Chinatown, Nagasaki</span>
+        <span class="pill">🚃 Direct bij tramhalte</span>
+        <span class="pill">♨️ Rooftop onsen</span>
+        <span class="pill">🏮 Naast oudste Chinatown Japan</span>
+        <span class="pill">🚶 Loopafstand bezienswaardigheden</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 17 · 4 Augustus</div>
+    <h4>Huis Ten Bosch</h4>
+    <div class="date">Holland in Japan</div>
+    <div class="activities">Een buitengewoon themapark dat een Nederlandse stad nabootst — compleet met grachten, windmolens en tulpenvelden — in de heuvels van Kyushu. De verlichtingsevenementen behoren tot de meest spectaculaire van Japan.</div>
+    <div class="highlight-box">🌷 <strong>Huis Ten Bosch</strong> — Een uniek stukje Europa naar Japan verplaatst. Beslaat 152 hectare — het grootste themapark van Japan. Het nachtelijke Art of Light-festival transformeert het hele park.</div>
+    <div class="hotel-tag">Hotel Lorelei</div>
+    <div class="transport-tag">🚗 Auto</div>
+    <div class="hotel-info-box">
+      <div class="hotel-info-title">🏨 Hotel Lorelei, Sasebo</div>
+      Charmant hotel met een prachtige ligging direct uitkijkend over Huis Ten Bosch, vlak naast het treinstation — ideaal voor vroege treinen naar Nagasaki, Sasebo en Fukuoka. Beschikt over eigen warmwaterbronnen (onsen), inclusief een heerlijk buitenbad. Het personeel is bijzonder behulpzaam — er is altijd iemand die Engels spreekt.
+      <div class="hotel-pills">
+        <span class="pill">📍 Naast Huis Ten Bosch station</span>
+        <span class="pill">♨️ Eigen onsen / buitenbad</span>
+        <span class="pill">🚂 Direct treinverbinding</span>
+        <span class="pill">🌅 Uitzicht over het park</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ==================== TAKACHIHO & KUROKAWA ==================== -->
+<div class="divider"><hr></div>
+<div class="section-header">
+  <div class="num">06</div>
+  <div>
+    <span class="label">Dagen 18–19</span>
+    <h3>Takachiho &amp; Kurokawa</h3>
+  </div>
+  <div class="section-line"></div>
+</div>
+
+<div class="dest-grid">
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 18 · 5 Augustus</div>
+    <h4>Takachiho-kloof</h4>
+        <div class="dest-photo"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky_t" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a3a1a"/><stop offset="100%" stop-color="#3a6a3a"/></linearGradient>
+    <linearGradient id="water_t" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a7a9a"/><stop offset="100%" stop-color="#1a5a7a"/></linearGradient>
+  </defs>
+  <rect width="800" height="200" fill="url(#sky_t)"/>
+  <!-- basalt cliff walls -->
+  <polygon points="0,0 0,200 180,200 180,20 120,0" fill="#3a3020"/>
+  <polygon points="800,0 800,200 620,200 620,20 680,0" fill="#2a2818"/>
+  <!-- cliff texture --> <line x1="60" y1="0" x2="60" y2="200" stroke="#4a4030" stroke-width="3" opacity="0.5"/>
+  <line x1="100" y1="0" x2="100" y2="200" stroke="#4a4030" stroke-width="2" opacity="0.4"/>
+  <line x1="140" y1="0" x2="140" y2="200" stroke="#4a4030" stroke-width="2" opacity="0.4"/>
+  <line x1="660" y1="0" x2="660" y2="200" stroke="#4a4030" stroke-width="3" opacity="0.5"/>
+  <line x1="700" y1="0" x2="700" y2="200" stroke="#4a4030" stroke-width="2" opacity="0.4"/>
+  <line x1="740" y1="0" x2="740" y2="200" stroke="#4a4030" stroke-width="2" opacity="0.4"/>
+  <!-- vegetation on cliffs --> <ellipse cx="40" cy="15" rx="50" ry="20" fill="#2a6a2a" opacity="0.8"/>
+  <ellipse cx="160" cy="10" rx="40" ry="15" fill="#3a7a3a" opacity="0.7"/>
+  <ellipse cx="640" cy="12" rx="45" ry="18" fill="#2a6a2a" opacity="0.8"/>
+  <ellipse cx="770" cy="8" rx="40" ry="15" fill="#3a7a3a" opacity="0.7"/>
+  <!-- river / water --> <rect x="180" y="150" width="440" height="50" fill="url(#water_t)"/>
+  <!-- water ripples --> <ellipse cx="350" cy="165" rx="40" ry="5" fill="white" opacity="0.15"/>
+  <ellipse cx="450" cy="175" rx="30" ry="4" fill="white" opacity="0.12"/>
+  <!-- waterfall Manai --> <rect x="355" y="0" width="25" height="150" fill="#a8d8f0" opacity="0.7"/>
+  <rect x="348" y="0" width="8" height="150" fill="white" opacity="0.3"/>
+  <!-- waterfall mist --> <ellipse cx="367" cy="148" rx="40" ry="15" fill="white" opacity="0.4"/>
+  <!-- rowing boat --> <ellipse cx="450" cy="170" rx="50" ry="12" fill="#8B6914"/>
+  <rect x="445" y="155" width="8" height="18" fill="#6a4a10"/>
+  <!-- people in boat --> <circle cx="430" cy="162" r="7" fill="#c8906a"/>
+  <circle cx="460" cy="160" r="7" fill="#c8906a"/>
+  <ellipse cx="445" cy="168" rx="20" ry="5" fill="#5a3a10" opacity="0.5"/>
+  <!-- oar --> <line x1="480" y1="165" x2="520" y2="180" stroke="#8a5a20" stroke-width="3"/>
+</svg></div>
+    <div class="date">Mythologie &amp; Watervallen</div>
+    <div class="activities">Rijd 3,5 uur per auto naar de mystieke hooglanden van Miyazaki om de Takachiho-kloof te bereiken — één van Japan's meest dramatische natuurlandschappen. Roei een bootje onder de 17 meter hoge Manai-waterval door de basalten kloof.</div>
+    <div class="highlight-box">🚣 <strong>Takachiho-kloof</strong> — De kloof is gevormd door vulkanische lavastromen en is doordrenkt van Japanse mythologie als de afdaling van de goden. De bootsverhuur biedt een uniek laag perspectief op de watervallen.</div>
+    <div class="note-box">⚠️ Reserveer het bootje van tevoren — de vraag overtreft het aanbod bij lange na. Overweeg ook de Yokagura-dansvoorstelling op het Amano Iwato Schrijn 's avonds.</div>
+    <div class="hotel-tag">Kean Vacation Stay 19038</div>
+    <div class="hotel-info-box">
+      <div class="hotel-info-title">🏨 Kean Vacation Stay 19038</div>
+      Vakantieverblijf in de omgeving van Takachiho, perfect als uitvalsbasis voor de kloof en de mythologische bezienswaardigheden in de regio. Vakantieverblijven in dit gebied zijn doorgaans authentiek en rustig gelegen — ideaal om na een dag roeien en wandelen tot rust te komen midden in de Miyazaki-hooglanden.
+      <div class="hotel-pills">
+        <span class="pill">📍 Takachiho, Miyazaki</span>
+        <span class="pill">🏡 Vakantieverblijf</span>
+        <span class="pill">🌿 Rustige ligging</span>
+        <span class="pill">🚗 Eigen auto handig</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 19 · 6 Augustus</div>
+    <h4>Amano Iwato, Mount Aso &amp; Kurokawa Onsen</h4>
+        <div class="dest-photo"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky_on" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1a2a"/><stop offset="100%" stop-color="#2a3a4a"/></linearGradient>
+    <linearGradient id="water_on" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5a9ab8"/><stop offset="100%" stop-color="#2a6a88"/></linearGradient>
+  </defs>
+  <rect width="800" height="200" fill="url(#sky_on)"/>
+  <!-- stars --> <circle cx="100" cy="20" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="250" cy="10" r="1" fill="white" opacity="0.7"/>
+  <circle cx="500" cy="15" r="1.5" fill="white" opacity="0.9"/>
+  <circle cx="650" cy="8" r="1" fill="white" opacity="0.6"/>
+  <circle cx="720" cy="30" r="2" fill="white" opacity="0.8"/>
+  <circle cx="50" cy="40" r="1" fill="white" opacity="0.7"/>
+  <!-- moon --> <circle cx="680" cy="35" r="22" fill="#fff8e0" opacity="0.9"/>
+  <circle cx="673" cy="30" r="18" fill="#3a4a5a" opacity="0.15"/>
+  <!-- mountain silhouettes --> <polygon points="0,120 150,40 300,100 500,30 700,80 800,50 800,200 0,200" fill="#1a2a1a" opacity="0.8"/>
+  <!-- forest --> <g fill="#0a1a0a" opacity="0.9">
+    <polygon points="30,120 50,80 70,120"/><polygon points="80,115 105,70 130,115"/>
+    <polygon points="620,115 645,72 670,115"/><polygon points="680,118 700,78 720,118"/>
+  </g>
+  <!-- ryokan building --> <rect x="300" y="90" width="200" height="90" fill="#4a3020"/>
+  <polygon points="280,90 520,90 510,72 290,72" fill="#3a2010"/>
+  <!-- lit windows --> <rect x="318" y="105" width="25" height="20" rx="2" fill="#ffdd88" opacity="0.9"/>
+  <rect x="360" y="105" width="25" height="20" rx="2" fill="#ffdd88" opacity="0.8"/>
+  <rect x="415" y="105" width="25" height="20" rx="2" fill="#ffdd88" opacity="0.9"/>
+  <rect x="457" y="105" width="25" height="20" rx="2" fill="#ffcc66" opacity="0.7"/>
+  <!-- onsen bath area -->
+  <rect x="200" y="155" width="400" height="45" fill="url(#water_on)" rx="5"/>
+  <!-- steam wisps -->
+  <path d="M280,155 Q275,135 280,120 Q285,108 280,95" fill="none" stroke="white" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M330,155 Q325,138 332,122 Q337,108 330,95" fill="none" stroke="white" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+  <path d="M400,155 Q395,138 402,122 Q407,108 400,95" fill="none" stroke="white" stroke-width="2.5" opacity="0.35" stroke-linecap="round"/>
+  <path d="M470,155 Q465,138 472,122 Q477,108 470,95" fill="none" stroke="white" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+  <path d="M530,155 Q525,138 532,122 Q537,108 530,95" fill="none" stroke="white" stroke-width="2.5" opacity="0.3" stroke-linecap="round"/>
+  <!-- bathers heads --> <circle cx="280" cy="162" r="9" fill="#d4906a"/>
+  <circle cx="350" cy="160" r="9" fill="#d4906a"/>
+  <circle cx="430" cy="162" r="9" fill="#c8806a"/>
+  <circle cx="510" cy="161" r="9" fill="#d4906a"/>
+  <!-- lanterns --> <rect x="188" y="130" width="8" height="25" fill="#3a2010"/>
+  <rect x="183" y="122" width="18" height="14" rx="5" fill="#ff9920" opacity="0.9"/>
+  <rect x="604" y="130" width="8" height="25" fill="#3a2010"/>
+  <rect x="599" y="122" width="18" height="14" rx="5" fill="#ff9920" opacity="0.9"/>
+  <!-- river edge rocks --> <ellipse cx="170" cy="190" rx="35" ry="12" fill="#4a4030" opacity="0.8"/>
+  <ellipse cx="630" cy="192" rx="30" ry="10" fill="#4a4030" opacity="0.8"/>
+</svg></div>
+    <div class="date">Vulkaan, Schrijn &amp; Warmwaterbronnen</div>
+    <div class="activities">Bezoek het heilige Amano Iwato Schrijn voordat je door de enorme caldera van de actieve vulkaan Mount Aso rijdt. Eindig de dag met traditionele buitenbaden in Kurokawa Onsen — één van Japan's mooiste ryokan-steden.</div>
+    <div class="highlight-box">🌋 <strong>Mount Aso</strong> — Een van 's werelds grootste actieve caldera's. Als de omstandigheden het toelaten, nader de rokende Nakadake-krater. De caldera-graslanden zijn spectaculair vanaf de randweg.</div>
+    <div class="hotel-tag">Hotel Yusai Bekkan, Kurokawa</div>
+    <div class="transport-tag">🚗 Auto</div>
+    <div class="hotel-info-box">
+      <div class="hotel-info-title">🏨 Hotel Yusai Bekkan, Kurokawa Onsen</div>
+      Authentieke ryokan in het hart van het beroemde Kurokawa Onsen-dorp, omringd door weelderig bergnatuur. Het hotel beschikt over meerdere eigen warmwaterbronnen met natuurlijk bronwater, plus een buitenvoetbad. Gasten verblijven op traditionele tatami-kamers. Overnachting hier geeft ook toegang tot de grote baden van het zusterpand Yukyo no Hibiki Yusai — een echte traktatie.
+      <div class="hotel-pills">
+        <span class="pill">📍 Kurokawa Onsen, Kumamoto</span>
+        <span class="pill">♨️ Meerdere eigen onsens</span>
+        <span class="pill">🛖 Traditionele tatami-kamers</span>
+        <span class="pill">🌿 Midden in de natuur</span>
+        <span class="pill">🦶 Buitenvoetbad</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ==================== FUKUOKA & OKINAWA ==================== -->
+<div class="divider"><hr></div>
+<div class="section-header">
+  <div class="num">07</div>
+  <div>
+    <span class="label">Dagen 20–23</span>
+    <h3>Fukuoka &amp; Okinawa</h3>
+  </div>
+  <div class="section-line"></div>
+</div>
+
+<div class="dest-grid">
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 20 · 7 Augustus</div>
+    <h4>Fukuoka</h4>
+        <div class="dest-photo"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="sky_y" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d0d1a"/><stop offset="100%" stop-color="#1a1a2a"/></linearGradient></defs>
+  <rect width="800" height="200" fill="url(#sky_y)"/>
+  <!-- stars --> <circle cx="80" cy="15" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="200" cy="8" r="1" fill="white" opacity="0.6"/>
+  <circle cx="600" cy="12" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="720" cy="20" r="1" fill="white" opacity="0.6"/>
+  <!-- yatai stall 1 --> <g transform="translate(120,50)">
+    <rect x="0" y="50" width="140" height="100" fill="#3a2010"/>
+    <polygon points="-15,50 155,50 140,30 0,30" fill="#c0392b"/>
+    <rect x="-15" y="30" width="170" height="8" fill="#922b21"/>
+    <!-- noren curtain --> <rect x="5" y="50" width="18" height="35" fill="#c0392b" opacity="0.8"/>
+    <rect x="28" y="50" width="18" height="35" fill="#c0392b" opacity="0.8"/>
+    <rect x="51" y="50" width="18" height="35" fill="#922b21" opacity="0.8"/>
+    <rect x="74" y="50" width="18" height="35" fill="#c0392b" opacity="0.8"/>
+    <rect x="97" y="50" width="18" height="35" fill="#922b21" opacity="0.8"/>
+    <rect x="120" y="50" width="15" height="35" fill="#c0392b" opacity="0.8"/>
+    <!-- counter --> <rect x="0" y="85" width="140" height="10" fill="#7a5020"/>
+    <!-- food items --> <circle cx="25" cy="80" r="8" fill="#ff7020" opacity="0.9"/>
+    <circle cx="50" cy="80" r="8" fill="#ff5010" opacity="0.9"/>
+    <circle cx="75" cy="80" r="8" fill="#ff7020" opacity="0.9"/>
+    <circle cx="100" cy="80" r="8" fill="#ff5010" opacity="0.9"/>
+    <!-- lanterns -->
+    <circle cx="30" cy="20" r="12" fill="#ff9920" opacity="0.9"/>
+    <circle cx="70" cy="15" r="14" fill="#ffcc00" opacity="0.9"/>
+    <circle cx="110" cy="18" r="12" fill="#ff9920" opacity="0.9"/>
+    <rect x="64" y="0" width="4" height="15" fill="#5a3010"/>
+    <!-- japanese text --> <text x="60" y="45" font-size="11" fill="white" text-anchor="middle" font-family="serif" opacity="0.8">屋台</text>
+  </g>
+  <!-- yatai stall 2 --> <g transform="translate(360,55)">
+    <rect x="0" y="50" width="130" height="95" fill="#2a1a08"/>
+    <polygon points="-10,50 140,50 130,32 0,32" fill="#8B1A1A"/>
+    <rect x="-10" y="32" width="150" height="7" fill="#6a0f0f"/>
+    <rect x="5" y="50" width="16" height="32" fill="#8B1A1A" opacity="0.8"/>
+    <rect x="26" y="50" width="16" height="32" fill="#6a0f0f" opacity="0.8"/>
+    <rect x="47" y="50" width="16" height="32" fill="#8B1A1A" opacity="0.8"/>
+    <rect x="68" y="50" width="16" height="32" fill="#6a0f0f" opacity="0.8"/>
+    <rect x="89" y="50" width="16" height="32" fill="#8B1A1A" opacity="0.8"/>
+    <rect x="0" y="82" width="130" height="9" fill="#6a4010"/>
+    <!-- ramen bowls --> <ellipse cx="30" cy="76" rx="14" ry="7" fill="#f5e0c0"/>
+    <ellipse cx="65" cy="76" rx="14" ry="7" fill="#f5e0c0"/>
+    <ellipse cx="100" cy="76" rx="14" ry="7" fill="#f5e0c0"/>
+    <!-- steam --> <path d="M30,68 Q28,58 30,50" fill="none" stroke="white" stroke-width="1.5" opacity="0.4"/>
+    <path d="M65,68 Q63,58 65,50" fill="none" stroke="white" stroke-width="1.5" opacity="0.4"/>
+    <!-- lanterns -->
+    <circle cx="20" cy="22" r="11" fill="#ff8800" opacity="0.9"/>
+    <circle cx="60" cy="16" r="13" fill="#ffaa00" opacity="0.9"/>
+    <circle cx="100" cy="20" r="11" fill="#ff8800" opacity="0.9"/>
+    <text x="55" y="43" font-size="10" fill="white" text-anchor="middle" font-family="serif" opacity="0.8">ラーメン</text>
+  </g>
+  <!-- seated people at stall 1 -->
+  <g transform="translate(120,50)">
+    <ellipse cx="15" cy="130" rx="9" ry="20" fill="#2a4a6a" opacity="0.8"/>
+    <circle cx="15" cy="108" r="8" fill="#d4906a" opacity="0.8"/>
+    <ellipse cx="45" cy="133" rx="9" ry="18" fill="#3a2a4a" opacity="0.8"/>
+    <circle cx="45" cy="113" r="8" fill="#c8806a" opacity="0.8"/>
+    <ellipse cx="105" cy="131" rx="9" ry="19" fill="#4a3a2a" opacity="0.8"/>
+    <circle cx="105" cy="110" r="8" fill="#d4906a" opacity="0.8"/>
+  </g>
+  <!-- river reflection --> <rect x="0" y="160" width="800" height="40" fill="#0a1a2a" opacity="0.7"/>
+  <line x1="0" y1="160" x2="800" y2="160" stroke="#2a3a5a" stroke-width="2"/>
+  <!-- reflected lights --> <ellipse cx="180" cy="175" rx="15" ry="4" fill="#ff9920" opacity="0.3"/>
+  <ellipse cx="420" cy="178" rx="12" ry="3" fill="#ffcc00" opacity="0.25"/>
+  <ellipse cx="580" cy="174" rx="10" ry="3" fill="#ff8800" opacity="0.3"/>
+  <!-- city lights bg --> <rect x="0" y="0" width="800" height="60" fill="#0d0d1a"/>
+  <rect x="50" y="20" width="15" height="45" fill="#1a2a4a"/>
+  <rect x="75" y="10" width="20" height="55" fill="#1a2a3a"/>
+  <rect x="700" y="15" width="18" height="50" fill="#1a2a4a"/>
+  <rect x="730" y="5" width="22" height="60" fill="#1a2a3a"/>
+  <circle cx="60" cy="18" r="2" fill="#ffff88" opacity="0.6"/>
+  <circle cx="85" cy="9" r="2" fill="#ffff88" opacity="0.5"/>
+  <circle cx="710" cy="14" r="2" fill="#ffff88" opacity="0.6"/>
+  <circle cx="742" cy="4" r="2" fill="#ffff88" opacity="0.5"/>
+</svg></div>
+    <div class="date">Hakata Ramen &amp; Yatai-Cultuur</div>
+    <div class="activities">Japan's snelst groeiende stad en culinaire hoofdstad van Kyushu. Slenter door Ohori Park, dwaal door het Canal City-winkelcomplex, en beleef 's avonds de legendarische Fukuoka yatai — buiteneettenten die de beroemde Hakata ramen serveren onder de sterren.</div>
+    <div class="highlight-box">🍜 <strong>Fukuoka Yatai</strong> — Deze kleine open kraampjes langs de Nakasu-rivieroever en Tenjin zijn iconisch. Trek een kruk bij, bestel tonkotsu ramen en chat met locals — een typisch Japanse avond.</div>
+    <div class="hotel-tag">Hotel Strata, Naha (avondvlucht)</div>
+    <div class="transport-tag">🚗 Auto → ✈ Avondvlucht naar Okinawa</div>
+    <div class="hotel-info-box">
+      <div class="hotel-info-title">🏨 Hotel Strata Naha, Okinawa</div>
+      Stijlvol boetiekhotel van 4 sterren in hartje Naha, direct tegenover station Miebashi van de monorail en op 6 minuten lopen van de Kokusai Dori shoppingstraat. Ontworpen met traditionele Okinawaanse materialen en warme kleuren, met een Ryukyu-geïnspireerde binnentuin en een 14-meter zwembad. Het dakterras-café op de 15e verdieping biedt een fantastisch uitzicht over de stad.
+      <div class="hotel-pills">
+        <span class="pill">📍 Makishi, Naha</span>
+        <span class="pill">🚇 Direct naast monorail</span>
+        <span class="pill">🏊 Binnentuin &amp; zwembad</span>
+        <span class="pill">🌅 Rooftop bar (15e verdieping)</span>
+        <span class="pill">⭐ 9.2/10 gasten</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dagen 21–23 · 8–10 Augustus</div>
+    <h4>Okinawa</h4>
+        <div class="dest-photo"><svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky_ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0077b6"/><stop offset="60%" stop-color="#48cae4"/><stop offset="100%" stop-color="#90e0ef"/></linearGradient>
+    <linearGradient id="sea_ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00b4d8"/><stop offset="100%" stop-color="#0077b6"/></linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f4e4b0"/><stop offset="100%" stop-color="#e8d090"/></linearGradient>
+  </defs>
+  <rect width="800" height="200" fill="url(#sky_ok)"/>
+  <!-- clouds --> <ellipse cx="180" cy="30" rx="100" ry="25" fill="white" opacity="0.85"/>
+  <ellipse cx="620" cy="25" rx="90" ry="22" fill="white" opacity="0.8"/>
+  <ellipse cx="400" cy="18" rx="70" ry="18" fill="white" opacity="0.7"/>
+  <!-- sea surface --> <rect x="0" y="110" width="800" height="90" fill="url(#sea_ok)"/>
+  <!-- underwater view (lower part) --> <rect x="0" y="140" width="800" height="60" fill="#0096c7" opacity="0.5"/>
+  <!-- water surface shimmer --> <path d="M0,112 Q100,108 200,112 Q300,116 400,112 Q500,108 600,112 Q700,116 800,112" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+  <!-- sand bottom --> <rect x="0" y="170" width="800" height="30" fill="url(#sand)" opacity="0.6"/>
+  <!-- coral 1 --> <g transform="translate(150,165)">
+    <rect x="-3" y="-30" width="6" height="30" fill="#e07060" rx="3"/>
+    <rect x="-12" y="-20" width="5" height="20" fill="#e07060" rx="2.5"/>
+    <rect x="7" y="-22" width="5" height="22" fill="#e07060" rx="2.5"/>
+  </g>
+  <!-- coral 2 --> <g transform="translate(480,168)">
+    <rect x="-3" y="-28" width="6" height="28" fill="#c05080" rx="3"/>
+    <rect x="-10" y="-18" width="5" height="18" fill="#c05080" rx="2.5"/>
+    <rect x="5" y="-20" width="5" height="20" fill="#c05080" rx="2.5"/>
+  </g>
+  <!-- coral 3 round --> <circle cx="650" cy="168" r="14" fill="#ff8c42" opacity="0.8"/>
+  <circle cx="655" cy="162" r="10" fill="#ff9a55" opacity="0.7"/>
+  <!-- fish --> <g transform="translate(300,150)">
+    <ellipse cx="0" cy="0" rx="20" ry="9" fill="#ff9500"/>
+    <line x1="-20" y1="0" x2="-30" y2="-6" stroke="#ff9500" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-20" y1="0" x2="-30" y2="6" stroke="#ff9500" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="14" cy="-2" r="3" fill="white"/>
+    <circle cx="15" cy="-2" r="2" fill="#1a1a1a"/>
+    <line x1="-5" y1="-9" x2="-5" y2="9" stroke="white" stroke-width="1" opacity="0.4"/>
+  </g>
+  <!-- sea turtle --> <g transform="translate(550,145)">
+    <ellipse cx="0" cy="0" rx="25" ry="18" fill="#4a7a3a"/>
+    <ellipse cx="0" cy="0" rx="18" ry="12" fill="#5a8a4a" opacity="0.7"/>
+    <ellipse cx="22" cy="-5" rx="12" ry="5" fill="#4a7a3a" transform="rotate(-20 22 -5)"/>
+    <ellipse cx="-22" cy="-5" rx="12" ry="5" fill="#4a7a3a" transform="rotate(20 -22 -5)"/>
+    <ellipse cx="15" cy="12" rx="8" ry="4" fill="#4a7a3a" transform="rotate(15 15 12)"/>
+    <ellipse cx="-15" cy="12" rx="8" ry="4" fill="#4a7a3a" transform="rotate(-15 -15 12)"/>
+    <ellipse cx="30" cy="-2" rx="7" ry="4" fill="#3a6a2a"/>
+    <circle cx="33" cy="-4" r="2.5" fill="#1a1a1a"/>
+  </g>
+  <!-- snorkeler --> <g transform="translate(220,118)">
+    <ellipse cx="0" cy="0" rx="12" ry="8" fill="#e8c090"/>
+    <rect x="-14" y="-3" width="28" height="6" rx="5" fill="#2255aa" opacity="0.8"/>
+    <line x1="0" y1="-8" x2="0" y2="-22" stroke="#2255aa" stroke-width="3"/>
+    <ellipse cx="-30" cy="6" rx="22" ry="6" fill="#ff5533" opacity="0.8" transform="rotate(-10 -30 6)"/>
+    <ellipse cx="30" cy="6" rx="22" ry="6" fill="#ff5533" opacity="0.8" transform="rotate(10 30 6)"/>
+  </g>
+  <!-- beach edge --> <ellipse cx="400" cy="115" rx="400" ry="20" fill="#f4e4b0" opacity="0.35"/>
+  <!-- palm tree hint --> <rect x="30" y="60" width="10" height="55" fill="#7a5a20"/>
+  <ellipse cx="35" cy="55" rx="35" ry="15" fill="#3a8a20" opacity="0.8" transform="rotate(-15 35 55)"/>
+  <ellipse cx="25" cy="50" rx="30" ry="12" fill="#4a9a2a" opacity="0.7" transform="rotate(10 25 50)"/>
+</svg></div>
+    <div class="date">Strand, Rif &amp; Ryukyu-Cultuur</div>
+    <div class="activities">Drie dagen op Japan's tropische eilandparadijs. Witte zandstranden, kleurrijke koraalriffen en een aparte Ryukyu-cultuur die nergens anders in Japan te vinden is. Snorkel tussen zeeschildpadden, verken het turquoise water en geniet van Okinawaanse keuken.</div>
+    <div class="highlight-box">🐠 <strong>Okinawa Snorkelen</strong> — De Kerama Eilanden, slechts 30 km voor de kust, bieden het helderste water van Japan met buitengewone koraalrif-diversiteit. Dagtochten vertrekken vanuit Naha's Tomari Haven.</div>
+    <div class="note-box">🌤️ Plan A: Controleer het weerbericht — Okinawa in augustus kan buien hebben. Houd overdekte alternatieven achter de hand (Shuri Kasteel, Churaumi Aquarium) voor het geval dat.</div>
+    <div class="hotel-tag">Hotel Strata Naha</div>
+    <div class="hotel-info-box">
+      <div class="hotel-info-title">🏨 Hotel Strata Naha, Okinawa</div>
+      Stijlvol boetiekhotel van 4 sterren in hartje Naha, direct tegenover station Miebashi van de monorail en op 6 minuten lopen van de Kokusai Dori shoppingstraat. Ontworpen met traditionele Okinawaanse materialen en warme kleuren, met een Ryukyu-geïnspireerde binnentuin en een zwembad. Het dakterras-café op de 15e verdieping biedt een fantastisch uitzicht over de stad.
+      <div class="hotel-pills">
+        <span class="pill">📍 Makishi, Naha</span>
+        <span class="pill">🚇 Direct naast monorail</span>
+        <span class="pill">🏊 Binnentuin &amp; zwembad</span>
+        <span class="pill">🌅 Rooftop bar (15e verdieping)</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ==================== TERUG NAAR TOKYO ==================== -->
+<div class="divider"><hr></div>
+<div class="section-header">
+  <div class="num">08</div>
+  <div>
+    <span class="label">Dagen 24–26</span>
+    <h3>Tokyo — Het Slotakkoord</h3>
+  </div>
+  <div class="section-line"></div>
+</div>
+
+<div class="dest-grid">
+
+  <div class="dest-card travel-day-card">
+    <div class="day-badge">Dag 24 · 11 Augustus</div>
+    <h4>Vlucht terug naar Tokyo</h4>
+    <div class="date">Terug naar de Hoofdstad</div>
+    <div class="activities">Vlieg terug naar Tokyo en check in het Grand Prince Hotel Shin Takanawa — een klassiek hotel in prachtige tuinen met uitzicht op de Baai van Tokyo, een verfijnd einde van de reis.</div>
+    <div class="hotel-tag">Grand Prince Hotel Shin Takanawa</div>
+    <div class="transport-tag">✈ Binnenlandse vlucht</div>
+    <div class="hotel-info-box">
+      <div class="hotel-info-title">🏨 Grand Prince Hotel Shin Takanawa</div>
+      Luxe 5-sterrenhotel (eigendom van de Japanse keizerlijke familie) in het groene Takanawa-district, op minder dan 10 minuten lopen van Shinagawa Station — het knooppunt voor zowel JR-treinen als de Shinkansen richting luchthaven. Het hotel voelt als een stadsresort: uitgestrekte Japanse tuinen, meerdere restaurants (Japans, Chinees, westers), spa en fitnessstudio. Kamers zijn opvallend ruim met balkons en uitzicht op Tokyo Toren. Een 7-Eleven bevindt zich in het souterrain.
+      <div class="hotel-pills">
+        <span class="pill">📍 Takanawa, Minato</span>
+        <span class="pill">🚅 10 min naar Shinagawa Station</span>
+        <span class="pill">🌿 Japanse tuinen</span>
+        <span class="pill">🍽️ 4 restaurants ter plaatse</span>
+        <span class="pill">🏋️ Spa &amp; fitness</span>
+        <span class="pill">⭐ 5 sterren</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 25 · 12 Augustus</div>
+    <h4>Tokyo DisneySea</h4>
+    <div class="date">Het Mooiste Pretpark ter Wereld</div>
+    <div class="activities">DisneySea wordt algemeen beschouwd als het mooiste pretpark ter wereld — een adembenemend havenmeesterwerk met negen meeslepende havens. Het nieuwe Fantasy Springs-gebied, gebaseerd op Frozen, Rapunzel en Peter Pan, is een absolute must.</div>
+    <div class="highlight-box">🎠 <strong>Fantasy Springs</strong> — Geopend in 2024, dit spectaculaire nieuwe land heeft drie themawerelden. Boek tickets en prioriteitspassen ruim van tevoren.</div>
+    <div class="note-box">⚠️ Boek tickets online ruim van tevoren — DisneySea is regelmatig uitverkocht, zeker in augustus.</div>
+  </div>
+
+  <div class="dest-card">
+    <div class="day-badge">Dag 26 · 13 Augustus</div>
+    <h4>Laatste Dag in Tokyo</h4>
+    <div class="date">Souvenirs, Herinneringen &amp; Afscheid</div>
+    <div class="activities">Een vrije dag om favoriete plekken opnieuw te bezoeken, laatste cadeaus te vinden en Tokyo nog één keer te proeven. Overweeg het teamLab Borderless digitale kunstmuseum, een bezoek aan de Tokyo Skytree bij zonsondergang, of een rustige laatste maaltijd in een verborgen izakaya.</div>
+    <div class="highlight-box">🌆 <strong>Tokyo Skytree</strong> — Met 634 m de hoogste toren ter wereld. Het observatiedek op 450 m biedt een ongeëvenaard afscheidspanorama van de stad die je bent gaan liefhebben.</div>
+  </div>
+
+</div>
+
+<!-- ==================== VERTREK ==================== -->
+<div class="divider"><hr></div>
+<div class="dest-grid" style="max-width:1100px; margin: 40px auto 0; padding: 0 40px;">
+
+  <div class="dest-card travel-day-card">
+    <div class="day-badge">Dag 27 · 14 Augustus</div>
+    <h4>Laatste avond in Tokyo</h4>
+    <div class="date">Afscheid van Japan</div>
+    <div class="activities">Je laatste avond in de stad. Geniet nog een laatste keer van Tokyo — een avondwandeling, een afscheidsmaaltijd of gewoon rustig genieten van het sfeervolle stadsgeluid. Morgennacht vertrekt de vlucht terug naar huis.</div>
+    <div class="transport-tag">🌙 Rustige avond · morgen vroeg naar het vliegveld</div>
+  </div>
+
+  <div class="dest-card travel-day-card">
+    <div class="day-badge">Dag 28 · 15 Augustus</div>
+    <h4>Terugvlucht — Tokyo naar Amsterdam</h4>
+    <div class="date">Via Zürich weer naar huis</div>
+    <div class="activities">Vroeg naar Tokyo Narita voor de lange vlucht terug naar Europa. Na landing in Zürich nog één korte hop en dan ben je weer thuis — met een koffer vol herinneringen en ongetwijfeld plannen voor een volgende reis.</div>
+    <div class="note-box">
+      ✈ <strong>LX 161</strong> &nbsp;NRT → ZRH &nbsp;·&nbsp; vertrek 11:00 lokaal · aankomst 18:25
+      <a class="fr-link" href="https://www.flightradar24.com/data/flights/lx161" target="_blank">Volg op FR24</a><br>
+      ✈ <strong>LX 736</strong> &nbsp;ZRH → AMS &nbsp;·&nbsp; vertrek 20:40 · aankomst 22:15
+      <a class="fr-link" href="https://www.flightradar24.com/data/flights/lx736" target="_blank">Volg op FR24</a>
+    </div>
+    <div class="transport-tag">✈ Swiss International Air Lines</div>
+  </div>
+
+  <div class="dest-card travel-day-card">
+    <div class="day-badge">Dag 28 · 15 Augustus</div>
+    <h4>Welkom thuis, Kim &amp; Marco!</h4>
+    <div class="date">Aankomst Amsterdam — Einde van de Reis</div>
+    <div class="activities">Landing op Schiphol om 22:15. Koffer uitpakken, foto's terugkijken en beginnen plannen voor het volgende avontuur. Japan heeft de gewoonte je terug te trekken.</div>
+    <div class="transport-tag">🏠 Amsterdam Schiphol · aankomst 22:15</div>
+  </div>
+
+</div>
+
+<!-- HIGHLIGHTS -->
+<div class="highlights-section">
+  <div class="highlights-header">
+    <h2>Hoogtepunten in één Oogopslag</h2>
+    <p>Een greep uit wat Kim &amp; Marco gaan beleven — 28 dagen lang</p>
+  </div>
+  <div class="highlights-grid">
+    <div class="highlight-card">
+      <div class="icon">🏯</div>
+      <h4>3 UNESCO-Erfgoeden</h4>
+      <p>Hiroshima Vredesgedenkteken, Itsukushima Schrijn op Miyajima en de historische monumenten van Nara — alle drie op je reisplan.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="icon">🎢</div>
+      <h4>4 Pretparken</h4>
+      <p>Tokyo Disneyland, Tokyo DisneySea, Universal Studios Japan en Huis Ten Bosch — Japan maakt pretparken als nergens anders ter wereld.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="icon">🚅</div>
+      <h4>Shinkansen-ritten</h4>
+      <p>Reizen tussen steden op de legendarische kogeltreinen — één van de grote reisgenoegens, en een staaltje ingenieursvakmanschap.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="icon">♨️</div>
+      <h4>Kurokawa Onsen</h4>
+      <p>Dompel je onder in traditionele buitenbaden in één van Japan's meest gevierde ryokan-steden na een dag op Mount Aso.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="icon">🌊</div>
+      <h4>Okinawa-wateren</h4>
+      <p>Drie dagen snorkelen in een aantal van Japan's helderste, meest biodiverse koraalrif-wateren — een tropisch slotakkoord.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="icon">🍜</div>
+      <h4>Culinaire Reis</h4>
+      <p>Hakata ramen yatai in Fukuoka, takoyaki in Osaka, kaiseki in Kyoto — Japan's regionale eetcultuur op zijn best.</p>
+    </div>
+  </div>
+</div>
+
+<!-- KAART -->
+<div style="max-width:1100px;margin:0 auto 0;padding:0 40px;">
+  <div class="widget-card widget-full" id="widget-kaart" style="border-top:3px solid #c0392b;padding:24px 28px;">
+    <div class="widget-title">Reisroute door Japan</div>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1jYjVIQR7DZM3DIbRRMTBXk4hJUm9rik" width="100%" height="520" style="border:0;display:block;" allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-kanji">旅</span>
+  <div class="footer-title">Japan 2026</div>
+  <p>19 Juli — 15 Augustus &nbsp;·&nbsp; 28 Dagen &nbsp;·&nbsp; 13 Bestemmingen</p>
+</footer>
+
+
+
+</body>
+</html>
