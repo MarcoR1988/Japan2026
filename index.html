@@ -146,6 +146,27 @@
 
   .family-note strong { color: var(--ink); }
 
+  .ps-btn-wrap { margin-top: 20px; text-align: center; }
+  .ps-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #1a1410;
+    color: #f7f3ee;
+    text-decoration: none;
+    padding: 13px 28px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 2px solid #1a1410;
+    transition: background 0.2s, color 0.2s;
+  }
+  .ps-btn:hover { background: #c0392b; border-color: #c0392b; color: white; }
+  .ps-btn .ps-icon { font-size: 18px; line-height: 1; }
+  .ps-btn .ps-label { line-height: 1.2; text-align: left; }
+  .ps-btn .ps-sub { display: block; font-size: 10px; font-weight: 400; opacity: 0.7; letter-spacing: 0.08em; margin-top: 2px; }
+
   .fr-link {
     display: inline-flex;
     align-items: center;
@@ -557,6 +578,15 @@
   <div class="family-note">
     💌 <strong>Voor familie &amp; vrienden:</strong> Hieronder vind je precies waar we zijn, waar we slapen en wat we doen — dag voor dag. De vluchtnummers zijn klikbaar via Flightradar24 zodat je ons live kunt volgen in de lucht!
   </div>
+  <div class="ps-btn-wrap">
+    <a class="ps-btn" href="https://www.polarsteps.com/KimdeGreef13/24942837-toscane?s=a9ac9a57-e1b4-42c2-ad26-f1aeb2128762" target="_blank" rel="noopener">
+      <span class="ps-icon">🧭</span>
+      <span class="ps-label">
+        Volg onze reis op Polarsteps
+        <span class="ps-sub">Live updates, foto&apos;s &amp; locaties</span>
+      </span>
+    </a>
+  </div>
 </div>
 
 
@@ -587,6 +617,48 @@
 .tijd-diff strong{color:#c0392b;}
 
 @media(max-width:700px){.widgets-section{grid-template-columns:1fr;padding:0 16px;}.widget-full{grid-column:1;}.tijd-clock{font-size:28px;}}
+/* WEER GEINTEGREERD IN WAAR-WIDGET */
+.waar-weer-box{margin-top:12px;padding-top:14px;border-top:1px solid #d4ccc4;display:flex;align-items:center;gap:16px;}
+.waar-weer-icon{font-size:40px;line-height:1;flex-shrink:0;}
+.waar-weer-info{flex:1;}
+.waar-weer-temp{font-family:Georgia,serif;font-size:28px;font-weight:700;color:#1a1410;line-height:1;}
+.waar-weer-temp span{font-size:15px;color:#7a6e64;font-weight:400;}
+.waar-weer-desc{font-size:12px;color:#2e7d7a;margin-top:2px;}
+.waar-weer-stats{font-size:11px;color:#7a6e64;margin-top:4px;}
+.waar-weer-loading{margin-top:12px;padding-top:14px;border-top:1px solid #d4ccc4;font-size:12px;color:#7a6e64;font-style:italic;}
+.waar-weer-label{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#7a6e64;margin-bottom:6px;}
+
+/* TIMELINE */
+.timeline-section{max-width:1100px;margin:0 auto 16px;padding:0 40px;}
+.timeline-wrap{overflow-x:auto;padding:10px 0 20px;}
+.timeline{display:flex;align-items:flex-start;min-width:900px;position:relative;padding:12px 20px 10px;}
+.timeline::before{content:'';position:absolute;top:21px;left:20px;right:20px;height:3px;background:#e0d8d0;z-index:0;}
+.timeline::after{content:'';position:absolute;top:21px;left:20px;width:var(--pct,0%);height:3px;background:linear-gradient(to right,#c9a84c,#c0392b,#2e7d7a);z-index:1;transition:width 0.5s;}
+.tl-stop{display:flex;flex-direction:column;align-items:center;flex:1;position:relative;z-index:2;cursor:pointer;}
+.tl-stop:hover div:first-child{transform:scale(1.3);}
+.tl-stop.active div:first-child{box-shadow:0 0 0 5px rgba(201,168,76,0.35),0 2px 8px rgba(0,0,0,0.3);}
+.tl-name{font-size:10px;font-family:Georgia,serif;font-weight:700;color:#1a1410;text-align:center;letter-spacing:0.04em;line-height:1.3;max-width:70px;}
+.tl-date{font-size:9px;color:#7a6e64;text-align:center;margin-top:3px;line-height:1.3;}
+.tl-label{font-size:11px;color:#7a6e64;margin-bottom:10px;letter-spacing:0.1em;}
+.tl-before{font-size:12px;color:#7a6e64;text-align:center;padding:20px;}
+
+/* WEATHER */
+.weer-widget{background:white;border:1px solid #d4ccc4;border-top:3px solid #2e7d7a;padding:24px 28px;max-width:1100px;margin:0 auto 16px;padding-left:40px;padding-right:40px;}
+.weer-widget-title{font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a1410;margin-bottom:16px;letter-spacing:.03em;}
+.weer-main{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+.weer-icon-big{font-size:56px;line-height:1;flex-shrink:0;}
+.weer-details{flex:1;}
+.weer-city-name{font-family:Georgia,serif;font-size:22px;font-weight:700;color:#1a1410;margin-bottom:4px;}
+.weer-temp-big{font-size:42px;font-weight:700;color:#1a1410;font-family:Georgia,serif;line-height:1;}
+.weer-temp-big span{font-size:20px;color:#7a6e64;font-weight:400;}
+.weer-desc-txt{font-size:14px;color:#7a6e64;margin-top:4px;text-transform:capitalize;}
+.weer-stats{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap;}
+.weer-stat{font-size:12px;color:#7a6e64;background:#f7f3ee;padding:4px 10px;border:1px solid #d4ccc4;}
+.weer-stat strong{color:#1a1410;}
+.weer-loading{font-size:13px;color:#7a6e64;font-style:italic;}
+.weer-error{font-size:12px;color:#c0392b;}
+.weer-update{font-size:10px;color:#7a6e64;margin-top:12px;letter-spacing:0.08em;}
+
 </style>
 
 <div class="widgets-section">
@@ -594,6 +666,7 @@
   <div class="widget-card" id="widget-waar">
     <div class="widget-title">Waar zijn Kim &amp; Marco nu?</div>
     <div id="waar-content"><div class="waar-msg">Laden...</div></div>
+    <div id="waar-weer"></div>
   </div>
 
   <div class="widget-card" id="widget-tijd">
@@ -625,92 +698,237 @@
 var TRIP_START = new Date('2026-07-19');
 var TRIP_END   = new Date('2026-08-15');
 
+// ── WHERE ARE KIM & MARCO ───────────────────────────────────────────
 var stops = [
-  {name:'Tokyo',          dag:2,  dateStr:'20-24 jul', color:'#c0392b', hotel:'Hotel RIO Shinjuku',            desc:'Senso-ji, Disneyland, Fuji'},
-  {name:'Kyoto',          dag:7,  dateStr:'25-27 jul', color:'#c0392b', hotel:'Stay SAKURA Kyoto Matsuri',     desc:'Fushimi Inari, Arashiyama'},
-  {name:'Osaka',          dag:10, dateStr:'28-30 jul', color:'#c0392b', hotel:'Hotel Resol Trinity',           desc:'Kasteel, USJ, Dotonbori'},
-  {name:'Hiroshima',      dag:13, dateStr:'31 jul-2 aug', color:'#c0392b', hotel:'Hotel Vista',               desc:'Vredespark, Miyajima'},
-  {name:'Nagasaki',       dag:16, dateStr:'3 aug',     color:'#c0392b', hotel:'Candeo Hotel Shinchi Chinatown',desc:'Glover-tuin, Vredespark'},
-  {name:'Huis Ten Bosch', dag:17, dateStr:'4 aug',     color:'#c0392b', hotel:'Hotel Lorelei',                desc:'Holland in Japan!'},
-  {name:'Takachiho',      dag:18, dateStr:'5 aug',     color:'#c0392b', hotel:'Kean Vacation Stay',           desc:'Kloof en waterval'},
-  {name:'Kurokawa',       dag:19, dateStr:'6 aug',     color:'#c0392b', hotel:'Hotel Yusai Bekkan',           desc:'Mount Aso, onsen'},
-  {name:'Fukuoka',        dag:20, dateStr:'7 aug',     color:'#c0392b', hotel:'Avondvlucht naar Okinawa',     desc:'Yatai ramen'},
-  {name:'Okinawa',        dag:21, dateStr:'8-10 aug',  color:'#c0392b', hotel:'Hotel Strata Naha',            desc:'Strand, snorkelen'},
-  {name:'Tokyo (terug)',  dag:24, dateStr:'11-13 aug', color:'#2e7d7a', hotel:'Grand Prince Shin Takanawa',   desc:'DisneySea, vrije dag'}
+  {name:'Tokyo',          dag:2,  dateStr:'20-24 jul', color:'#c0392b', hotel:'Hotel RIO Shinjuku',             desc:'Senso-ji, Disneyland, Fuji'},
+  {name:'Kyoto',          dag:7,  dateStr:'25-27 jul', color:'#c0392b', hotel:'Stay SAKURA Kyoto Matsuri',      desc:'Fushimi Inari, Arashiyama'},
+  {name:'Osaka',          dag:10, dateStr:'28-30 jul', color:'#c0392b', hotel:'Hotel Resol Trinity',            desc:'Kasteel, USJ, Dotonbori'},
+  {name:'Hiroshima',      dag:13, dateStr:'31 jul-2 aug', color:'#c0392b', hotel:'Hotel Vista',                 desc:'Vredespark, Miyajima'},
+  {name:'Nagasaki',       dag:16, dateStr:'3 aug',     color:'#c0392b', hotel:'Candeo Hotel Shinchi Chinatown', desc:'Glover-tuin, Vredespark'},
+  {name:'Huis Ten Bosch', dag:17, dateStr:'4 aug',     color:'#c0392b', hotel:'Hotel Lorelei',                  desc:'Holland in Japan!'},
+  {name:'Takachiho',      dag:18, dateStr:'5 aug',     color:'#c0392b', hotel:'Kean Vacation Stay',             desc:'Kloof en waterval'},
+  {name:'Kurokawa',       dag:19, dateStr:'6 aug',     color:'#c0392b', hotel:'Hotel Yusai Bekkan',             desc:'Mount Aso, onsen'},
+  {name:'Fukuoka',        dag:20, dateStr:'7 aug',     color:'#c0392b', hotel:'Avondvlucht naar Okinawa',       desc:'Yatai ramen'},
+  {name:'Okinawa',        dag:21, dateStr:'8-10 aug',  color:'#c0392b', hotel:'Hotel Strata Naha',              desc:'Strand, snorkelen'},
+  {name:'Tokyo (terug)',  dag:24, dateStr:'11-13 aug', color:'#2e7d7a', hotel:'Grand Prince Shin Takanawa',     desc:'DisneySea, vrije dag'}
 ];
 
-var coords = {
-  'Tokyo':         {x:490,y:178}, 'Kyoto':        {x:418,y:230},
-  'Osaka':         {x:408,y:248}, 'Hiroshima':    {x:340,y:262},
-  'Nagasaki':      {x:228,y:318}, 'Huis Ten Bosch':{x:235,y:305},
-  'Takachiho':     {x:278,y:330}, 'Kurokawa':     {x:268,y:310},
-  'Fukuoka':       {x:248,y:298}, 'Okinawa':      {x:310,y:430},
-  'Tokyo (terug)': {x:495,y:185}
-};
-
-function getDayOfTrip(){
-  var now = new Date();
-  return Math.floor((now - TRIP_START) / 86400000) + 1;
+function getDayOfTrip() {
+  return Math.floor((new Date() - TRIP_START) / 86400000) + 1;
 }
 
-function getCurrentStop(){
+function getCurrentStop() {
   var now = new Date();
-  if(now < TRIP_START) return {phase:'before', days: Math.ceil((TRIP_START-now)/86400000)};
-  if(now > TRIP_END)   return {phase:'after'};
+  if (now < TRIP_START) return {phase:'before', days: Math.ceil((TRIP_START - now) / 86400000)};
+  if (now > TRIP_END)   return {phase:'after'};
   var tripDay = getDayOfTrip();
   var cur = stops[0], nxt = null;
-  for(var i=0;i<stops.length-1;i++){
-    if(tripDay >= stops[i].dag && tripDay < stops[i+1].dag){cur=stops[i];nxt=stops[i+1];break;}
-    if(i===stops.length-2){cur=stops[stops.length-2];nxt=null;}
+  for (var i = 0; i < stops.length - 1; i++) {
+    if (tripDay >= stops[i].dag && tripDay < stops[i+1].dag) { cur = stops[i]; nxt = stops[i+1]; break; }
+    if (i === stops.length - 2) { cur = stops[stops.length - 2]; nxt = null; }
   }
-  var pct = Math.min(100, Math.round((tripDay/28)*100));
+  var pct = Math.min(100, Math.round((tripDay / 28) * 100));
   return {phase:'during', tripDay:tripDay, cur:cur, nxt:nxt, pct:pct};
 }
 
-function renderWaar(){
+function renderWaar() {
   var el = document.getElementById('waar-content');
-  if(!el) return;
+  if (!el) return;
   var s = getCurrentStop();
-  if(s.phase==='before'){
-    el.innerHTML = '<div class="waar-msg">De reis vertrekt over <strong>'+s.days+' dagen</strong> op 19 juli 2026 vanaf Amsterdam Schiphol.</div>';
+  if (s.phase === 'before') {
+    el.innerHTML = '<div class="waar-msg">De reis vertrekt over <strong>' + s.days + ' dagen</strong> op 19 juli 2026 vanaf Amsterdam Schiphol.</div>';
     return;
   }
-  if(s.phase==='after'){
+  if (s.phase === 'after') {
     el.innerHTML = '<div class="waar-msg">Kim &amp; Marco zijn weer thuis! Wat een avontuur!</div>';
     return;
   }
-  var h = '<div class="waar-active">';
-  h += '<div class="waar-dag">Dag '+s.tripDay+' van 28 &middot; '+s.cur.dateStr+'</div>';
-  h += '<div class="waar-naam">'+s.cur.name+'</div>';
-  h += '<div class="waar-info">'+s.cur.desc+'</div>';
-  h += '<div class="waar-info" style="margin-top:4px">Hotel: '+s.cur.hotel+'</div>';
-  h += '</div>';
-  h += '<div class="waar-progress-wrap"><div class="waar-progress-bar" style="width:'+s.pct+'%"></div></div>';
-  h += '<div class="waar-progress-label">'+s.pct+'% van de reis voltooid</div>';
-  if(s.nxt) h += '<div class="waar-next">Volgende stop: <strong>'+s.nxt.name+'</strong> (dag '+s.nxt.dag+')</div>';
-  el.innerHTML = h;
+  el.innerHTML =
+    '<div class="waar-active">'
+    + '<div class="waar-dag">Dag ' + s.tripDay + ' van 28 &middot; ' + s.cur.dateStr + '</div>'
+    + '<div class="waar-naam">' + s.cur.name + '</div>'
+    + '<div class="waar-info">' + s.cur.desc + '</div>'
+    + '<div class="waar-info" style="margin-top:4px">Hotel: ' + s.cur.hotel + '</div>'
+    + '</div>'
+    + '<div class="waar-progress-wrap"><div class="waar-progress-bar" style="width:' + s.pct + '%"></div></div>'
+    + '<div class="waar-progress-label">' + s.pct + '% van de reis voltooid</div>'
+    + (s.nxt ? '<div class="waar-next">Volgende stop: <strong>' + s.nxt.name + '</strong> (dag ' + s.nxt.dag + ')</div>' : '');
 }
 
-function renderClock(){
+function renderClock() {
   var now = new Date();
-  var nlT = now.toLocaleTimeString('nl-NL',{timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit',second:'2-digit'});
-  var jpT = now.toLocaleTimeString('nl-NL',{timeZone:'Asia/Tokyo',    hour:'2-digit',minute:'2-digit',second:'2-digit'});
-  var nlD = now.toLocaleDateString('nl-NL',{timeZone:'Europe/Amsterdam',weekday:'short',day:'numeric',month:'short'});
-  var jpD = now.toLocaleDateString('nl-NL',{timeZone:'Asia/Tokyo',    weekday:'short',day:'numeric',month:'short'});
-  var e = function(id){return document.getElementById(id);};
-  if(e('clock-nl')) e('clock-nl').textContent = nlT;
-  if(e('clock-jp')) e('clock-jp').textContent = jpT;
-  if(e('date-nl'))  e('date-nl').textContent  = nlD;
-  if(e('date-jp'))  e('date-jp').textContent  = jpD;
+  var nlT = now.toLocaleTimeString('nl-NL', {timeZone:'Europe/Amsterdam', hour:'2-digit', minute:'2-digit', second:'2-digit'});
+  var jpT = now.toLocaleTimeString('nl-NL', {timeZone:'Asia/Tokyo',       hour:'2-digit', minute:'2-digit', second:'2-digit'});
+  var nlD = now.toLocaleDateString('nl-NL',  {timeZone:'Europe/Amsterdam', weekday:'short', day:'numeric', month:'short'});
+  var jpD = now.toLocaleDateString('nl-NL',  {timeZone:'Asia/Tokyo',       weekday:'short', day:'numeric', month:'short'});
+  var e = function(id) { return document.getElementById(id); };
+  if (e('clock-nl')) e('clock-nl').textContent = nlT;
+  if (e('clock-jp')) e('clock-jp').textContent = jpT;
+  if (e('date-nl'))  e('date-nl').textContent  = nlD;
+  if (e('date-jp'))  e('date-jp').textContent  = jpD;
 }
 
+// ── TIMELINE ───────────────────────────────────────────────────────
+var tlStops = [
+  {name:'Vertrek',        date:'2026-07-19', city:'Amsterdam',      lat:52.37, lon:4.89,   col:'#c9a84c'},
+  {name:'Tokyo',          date:'2026-07-20', city:'Tokyo',          lat:35.68, lon:139.69, col:'#c0392b'},
+  {name:'Kyoto',          date:'2026-07-25', city:'Kyoto',          lat:35.01, lon:135.77, col:'#c0392b'},
+  {name:'Osaka',          date:'2026-07-28', city:'Osaka',          lat:34.69, lon:135.50, col:'#c0392b'},
+  {name:'Hiroshima',      date:'2026-07-31', city:'Hiroshima',      lat:34.39, lon:132.45, col:'#c0392b'},
+  {name:'Nagasaki',       date:'2026-08-03', city:'Nagasaki',       lat:32.75, lon:129.88, col:'#c0392b'},
+  {name:'Huis Ten Bosch', date:'2026-08-04', city:'Sasebo',         lat:33.18, lon:129.72, col:'#c0392b'},
+  {name:'Takachiho',      date:'2026-08-05', city:'Takachiho',      lat:32.70, lon:131.30, col:'#c0392b'},
+  {name:'Kurokawa',       date:'2026-08-06', city:'Kurokawa Onsen', lat:33.10, lon:131.04, col:'#c0392b'},
+  {name:'Fukuoka',        date:'2026-08-07', city:'Fukuoka',        lat:33.59, lon:130.40, col:'#c0392b'},
+  {name:'Okinawa',        date:'2026-08-08', city:'Naha',           lat:26.21, lon:127.68, col:'#c0392b'},
+  {name:'Tokyo',          date:'2026-08-11', city:'Tokyo',          lat:35.68, lon:139.69, col:'#2e7d7a'},
+  {name:'Thuis',          date:'2026-08-15', city:'Amsterdam',      lat:52.37, lon:4.89,   col:'#c9a84c'}
+];
 
-renderWaar();
-renderClock();
-setInterval(renderClock,1000);
+function getTlIdx() {
+  var now = new Date();
+  var idx = 0;
+  for (var i = 0; i < tlStops.length - 1; i++) {
+    if (now >= new Date(tlStops[i].date) && now < new Date(tlStops[i+1].date)) { idx = i; break; }
+  }
+  if (now >= new Date(tlStops[tlStops.length-1].date)) idx = tlStops.length - 1;
+  return idx;
+}
+
+function renderTimeline() {
+  var wrap = document.getElementById('timeline');
+  var lbl  = document.getElementById('tl-label');
+  if (!wrap) return;
+
+  var now   = new Date();
+  var start = new Date('2026-07-19');
+  var end   = new Date('2026-08-15');
+  var idx   = getTlIdx();
+
+  var pct = 0;
+  if (now >= end) pct = 100;
+  else if (now >= start) pct = Math.min(100, Math.round(((now - start) / (end - start)) * 100));
+
+  if (lbl) {
+    var days = Math.ceil((start - now) / 86400000);
+    if      (now < start) lbl.textContent = 'Nog ' + days + ' dagen tot vertrek - 19 juli 2026';
+    else if (now > end)   lbl.textContent = 'De reis is voltooid - wat een avontuur!';
+    else                  lbl.textContent = 'Nu bij: ' + tlStops[idx].name + ' - ' + pct + '% voltooid';
+  }
+
+  var out = '';
+  for (var i = 0; i < tlStops.length; i++) {
+    var s      = tlStops[i];
+    var active = (i === idx && now >= start && now <= end);
+    var past   = now >= new Date(s.date);
+    var bg     = past ? s.col : '#d4ccc4';
+    var sz     = active ? '22px' : '16px';
+    var ring   = active ? 'box-shadow:0 0 0 5px rgba(201,168,76,0.35),0 2px 8px rgba(0,0,0,0.3);' : 'box-shadow:0 2px 5px rgba(0,0,0,0.2);';
+    var d      = new Date(s.date);
+    var dlbl   = d.toLocaleDateString('nl-NL', {day:'numeric', month:'short'});
+    out += '<div class="tl-stop">'
+         + '<div style="width:' + sz + ';height:' + sz + ';border-radius:50%;background:' + bg + ';border:2.5px solid white;' + ring + 'margin-bottom:8px;transition:all 0.3s;"></div>'
+         + '<div class="tl-name">' + s.name + '</div>'
+         + '<div class="tl-date">' + dlbl + '</div>'
+         + '</div>';
+  }
+
+  // Inject: progress line first (absolute), then stops (relative z-index above)
+  wrap.innerHTML =
+    '<div style="position:absolute;top:21px;left:20px;right:20px;height:3px;background:#e0d8d0;z-index:0;"></div>'
+    + '<div style="position:absolute;top:21px;left:20px;width:' + pct + '%;height:3px;background:linear-gradient(to right,#c9a84c,#c0392b,#2e7d7a);z-index:1;transition:width 0.5s;"></div>'
+    + out;
+}
+
+// ── LIVE WEATHER ────────────────────────────────────────────────────
+function weerIcon(c) {
+  var icons = ['sunny','partly','partly','cloudy','cloudy','foggy','foggy','foggy','foggy','foggy','drizzle','drizzle','drizzle','drizzle','drizzle','drizzle','drizzle','drizzle','drizzle','drizzle','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','snowy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','rainy','stormy','stormy','stormy','stormy','stormy','stormy','stormy','stormy','stormy','stormy','stormy','stormy','stormy','stormy','stormy'];
+  var map = {sunny:'&#9728;&#65039;',partly:'&#9925;',cloudy:'&#9729;&#65039;',foggy:'&#127787;&#65039;',drizzle:'&#127746;&#65039;',rainy:'&#127783;&#65039;',snowy:'&#127784;&#65039;',stormy:'&#9928;&#65039;'};
+  var key = (c >= 0 && c < icons.length) ? icons[c] : 'cloudy';
+  return map[key] || '&#127777;&#65039;';
+}
+
+function weerDesc(c) {
+  if (c === 0) return 'Heldere lucht';
+  if (c <= 2)  return 'Gedeeltelijk bewolkt';
+  if (c === 3) return 'Bewolkt';
+  if (c <= 49) return 'Mist';
+  if (c <= 59) return 'Motregen';
+  if (c <= 69) return 'Regen';
+  if (c <= 79) return 'Sneeuw';
+  if (c <= 84) return 'Buien';
+  return 'Onweer';
+}
+
+function renderWeer() {
+  var box = document.getElementById('waar-weer');
+  if (!box) return;
+
+  var now   = new Date();
+  var start = new Date('2026-07-19');
+  var end   = new Date('2026-08-15');
+  var idx   = (now >= start && now <= end) ? getTlIdx() : 0;
+  var stop  = tlStops[idx];
+  var lbl   = (now < start) ? stop.city + ' (voor vertrek)' : (now > end) ? stop.city + ' (terug thuis)' : stop.city;
+
+  box.innerHTML = '<div class="waar-weer-loading">Weer ophalen voor ' + lbl + '...</div>';
+
+  var url = 'https://api.open-meteo.com/v1/forecast'
+    + '?latitude='  + stop.lat
+    + '&longitude=' + stop.lon
+    + '&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,weather_code'
+    + '&wind_speed_unit=kmh&timezone=auto';
+
+  fetch(url)
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      var c = d.current;
+      box.innerHTML =
+        '<div class="waar-weer-box">'
+        + '<div class="waar-weer-icon">' + weerIcon(c.weather_code) + '</div>'
+        + '<div class="waar-weer-info">'
+        + '<div class="waar-weer-label">Weer in ' + lbl + '</div>'
+        + '<div class="waar-weer-temp">' + Math.round(c.temperature_2m) + '<span>&deg;C</span></div>'
+        + '<div class="waar-weer-desc">' + weerDesc(c.weather_code) + ' &middot; voelt als ' + Math.round(c.apparent_temperature) + '&deg;C</div>'
+        + '<div class="waar-weer-stats">Vochtigheid ' + c.relative_humidity_2m + '% &middot; wind ' + Math.round(c.wind_speed_10m) + ' km/u</div>'
+        + '</div></div>';
+    })
+    .catch(function() {
+      box.innerHTML = '<div class="waar-weer-loading">Weer kon niet worden geladen.</div>';
+    });
+}
+
+function initAll() {
+  renderWaar();
+  renderClock();
+  renderTimeline();
+  renderWeer();
+  setInterval(renderClock, 1000);
+  setInterval(renderWeer, 600000);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAll);
+} else {
+  initAll();
+}
 
 })();
 </script>
+
+
+<!-- TIJDLIJN -->
+<div class="timeline-section">
+  <div class="widget-card widget-full" style="border-top:3px solid #c9a84c;padding:24px 28px;">
+    <div class="widget-title" style="margin-bottom:8px;">Reistijdlijn</div>
+    <div class="tl-label" id="tl-label"></div>
+    <div class="timeline-wrap">
+      <div class="timeline" id="timeline">
+        <div class="tl-progress" id="tl-progress" style="width:0%"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- ==================== TOKYO ==================== -->
