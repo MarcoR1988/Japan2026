@@ -718,13 +718,10 @@
 <div class="intro">
   <h2>Onze Reis</h2>
   <p>
-    Op 19 juli 2026 vertrekken Kim en Marco voor 28 dagen naar Japan. Van de bruisende metropool Tokyo tot rustige onsen-dorpjes, van eeuwenoude tempels tot tropische stranden bij Okinawa — deze pagina laat je meereizen, of je nu thuis zit of zelf onderweg bent.
+    Op 19 juli 2026 vertrekken Kim en Marco voor 28 dagen naar Japan. Van de bruisende metropool Tokyo tot rustige onsen-dorpjes, van eeuwenoude tempels tot tropische stranden bij Okinawa. Hieronder vind je precies waar we zijn, waar we slapen en wat we doen — dag voor dag. De vluchtnummers zijn klikbaar via Flightradar24 zodat je ons live kunt volgen in de lucht! Aangezien we hier zelf ook gebruik van maken, is de tekst mede vanuit ons eigen perspectief geschreven.
   </p>
-  <div class="family-note">
-    💌 <strong>Voor familie &amp; vrienden:</strong> Hieronder vind je precies waar we zijn, waar we slapen en wat we doen — dag voor dag. De vluchtnummers zijn klikbaar via Flightradar24 zodat je ons live kunt volgen in de lucht!
-  </div>
   <div class="ps-btn-wrap">
-    <a class="ps-btn" href="https://www.polarsteps.com/KimdeGreef13/24942837-toscane?s=a9ac9a57-e1b4-42c2-ad26-f1aeb2128762" target="_blank" rel="noopener">
+    <a class="ps-btn" href="https://www.polarsteps.com/KimdeGreef13/27034644-japan" target="_blank" rel="noopener">
       <span class="ps-icon">🧭</span>
       <span class="ps-label">
         Volg onze reis op Polarsteps
@@ -766,6 +763,9 @@
 .stats-item{font-size:11px;color:#7a6e64;background:#f7f3ee;padding:4px 12px;border-radius:100px;letter-spacing:0.03em;}
 .stats-item strong{color:#1a1410;}
 .crew-widget{border-left:4px solid #2e7d7a;}
+.crew-tip{display:none;margin-top:12px;background:linear-gradient(135deg,#2e7d7a 0%,#256562 100%);color:#eef7f6;border-radius:12px;padding:12px 16px;font-size:12px;line-height:1.6;}
+.crew-tip .crew-tip-label{display:inline-block;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;background:rgba(255,255,255,0.18);padding:2px 10px;border-radius:100px;margin-bottom:6px;font-weight:600;}
+.crew-tip strong{color:#fff;}
 .crew-badge{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;background:#2e7d7a;color:white;padding:3px 10px;border-radius:100px;margin-left:8px;vertical-align:middle;font-weight:600;}
 .crew-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-bottom:14px;}
 .crew-day{background:#f7f3ee;border-radius:12px;padding:12px 10px;text-align:center;}
@@ -1148,6 +1148,9 @@ function initCrewWeer() {
   var params = new URLSearchParams(window.location.search);
   if (params.get('crew') !== '1') return;
 
+  var tips = document.querySelectorAll('.crew-tip');
+  for (var t = 0; t < tips.length; t++) tips[t].style.display = 'block';
+
   var widget = document.getElementById('crew-weer');
   if (!widget) return;
   widget.style.display = 'block';
@@ -1386,6 +1389,7 @@ if (document.readyState === 'loading') {
     <div class="activities">Tokyo Disneyland wordt consequent gerangschikt als één van de beste Disney-parken ter wereld — onberispelijk, innovatief en onvergetelijk. Reserveer FastPass-tickets van tevoren voor de populairste attracties.</div>
     <div class="note-box">💡 Het park is na zonsondergang bijzonder spectaculair. Blijf voor de nachtparade en het vuurwerk — unieke Japanse Disney-magie.</div>
     <div class="hotel-tag">Hotel RIO, Tokyo</div>
+    <div class="crew-tip"><span class="crew-tip-label">&#128274; Alleen voor ons</span><br>Tickets uiterlijk <strong>2 maanden vooraf</strong> kopen via de Tokyo Disney Resort app. Premier Access voor Beauty &amp; the Beast direct om middernacht JST boeken. Popcorn-buckets = beste souvenirs!</div>
   </div>
 
   <div class="dest-card">
@@ -1415,6 +1419,7 @@ if (document.readyState === 'loading') {
     <div class="activities">Sluit je aan bij een begeleide dagtour naar de Fuji — Japan's meest iconische landmark en UNESCO Werelderfgoed. Bezoek het Fuji Vijf Meren-gebied en bestijg, als de omstandigheden het toelaten, het 5e Station op 2.300 m voor adembenemende uitzichten.</div>
     <div class="highlight-box">🗻 <strong>Mount Fuji</strong> — Met 3.776 m is Fuji Japan's hoogste berg en een heilig symbool. De mooiste uitzichten zijn vaak bij Meer Kawaguchi, vooral bij zonsopkomst met de weerspiegeling in het stille water.</div>
     <div class="hotel-tag">Hotel RIO, Tokyo</div>
+    <div class="crew-tip"><span class="crew-tip-label">&#128274; Alleen voor ons</span><br>Fuji is <strong>'s ochtends vroeg</strong> het vaakst zichtbaar — in de middag trekt bewolking op. Tour geboekt? Check de avond ervoor fuji-san.info voor zichtbaarheidsverwachting.</div>
   </div>
 
 </div>
@@ -1484,6 +1489,7 @@ if (document.readyState === 'loading') {
     <div class="activities">Wandel het bergpad door duizenden vermiljoenrode torii-poorten bij Fushimi Inari Taisha — één van Japan's meest gefotografeerde bezienswaardigheden. Breng de middag door in het historische Higashiyama-tempeldistrict van Kyoto.</div>
     <div class="highlight-box">⛩️ <strong>Fushimi Inari</strong> — Het volledige pad duurt 2–3 uur. Ga vroeg in de ochtend of laat in de middag om de drukte te vermijden en het magische licht door de poorten te fotograferen.</div>
     <div class="hotel-tag">Stay SAKURA Kyoto Matsuri</div>
+    <div class="crew-tip"><span class="crew-tip-label">&#128274; Alleen voor ons</span><br>Vertrek <strong>vóór 6:30</strong> vanaf het hotel — om 7:00 bij de poorten = vrijwel alleen. JR Nara-lijn 2 haltes naar Inari Station. 's Middags: Nishiki Market voor lunch en Gion voor de avondwandeling.</div>
   </div>
 
   <div class="dest-card">
@@ -1669,6 +1675,7 @@ if (document.readyState === 'loading') {
     <div class="activities">Een volle dag in één van Azië's beste pretparken. De Tovenaarswereld van Harry Potter, Super Nintendo World en de iconische Hollywood-attracties wachten op je. Boek Express-passen van tevoren voor de beste ervaring.</div>
     <div class="note-box">💡 Super Nintendo World is een USJ-exclusiviteit in Azië. De Mario Kart-rit en het Donkey Kong Country-gebied zijn een must — reserveer toegang via de USJ-app.</div>
     <div class="hotel-tag">Hotel Resol Trinity, Osaka</div>
+    <div class="crew-tip"><span class="crew-tip-label">&#128274; Alleen voor ons</span><br>Express Pass 7 <strong>verkoopt weken vooraf uit</strong> — check nu alvast de USJ-site. Bij aankomst direct in de app een timed entry voor Nintendo World pakken (gaat 's ochtends snel). Vroeg komen: park opent vaak 30 min eerder dan aangegeven.</div>
   </div>
 
 </div>
@@ -1751,6 +1758,7 @@ if (document.readyState === 'loading') {
     <div class="activities">Vaar over naar het heilige eiland Miyajima. De iconische vermiljoenrode Itsukushima torii-poort lijkt te drijven op het water bij vloed. Wandel over de Berg Misen door eeuwenoud cederwoud voor weids uitzicht over de Seto Binnenzee.</div>
     <div class="highlight-box">⛩️ <strong>Itsukushima Schrijn</strong> — Één van Japan's Drie Uitzichten. De drijvende poort is bijzonder magisch bij zonsondergang en verlicht 's nachts. Controleer de getijden voordat je gaat.</div>
     <div class="hotel-tag">Hotel Vista, Hiroshima</div>
+    <div class="crew-tip"><span class="crew-tip-label">&#128274; Alleen voor ons</span><br>Getijdentabel checken: <strong>hoog water = drijvende poort</strong>, laag water = ernaartoe lopen. Beide zien kan op één dag! Momiji manju (esdoorncakejes) vers van de bakplaat proeven in Omotesando-straat. Okonomiyaki vanavond: Okonomimura in Hiroshima, 25 kraampjes in één gebouw.</div>
     <div class="transport-tag">🚃 Trein + ⛴️ Veerboot</div>
   </div>
 
@@ -1776,6 +1784,7 @@ if (document.readyState === 'loading') {
     <div class="activities">Japan's meest internationale stad — een plek waar Portugese, Nederlandse en Chinese culturen eeuwenlang vermengd zijn. Bezoek het Nagasaki Vredespark, de Glover-tuin en het historische Dejima-district.</div>
     <div class="highlight-box">🏛️ <strong>Glover-tuin</strong> — Het landgoed op de heuvel van de Schotse koopman Thomas Glover, die hielp Japan te moderniseren. De tuin biedt spectaculair uitzicht over de haven van Nagasaki.</div>
     <div class="transport-tag">🚃 + 🚗 Trein &amp; Auto</div>
+    <div class="crew-tip"><span class="crew-tip-label">&#128274; Alleen voor ons</span><br>Ons hotel ligt <strong>naast Chinatown</strong> — champon (Nagasaki's beroemde noedelsoep) eten bij Kozanro of Shikairo, de uitvinders ervan. Tram-dagkaart &yen;600 dekt alles. Avondtip: Mount Inasa ropeway voor één van Japans mooiste nachtuitzichten.</div>
     <div class="hotel-tag">Candeo Hotel Nagasaki Shinchi Chinatown</div>
     <div class="hotel-info-box">
       <div class="hotel-info-title">🏨 Candeo Hotel Nagasaki Shinchi Chinatown</div>
@@ -1865,6 +1874,7 @@ if (document.readyState === 'loading') {
     <div class="highlight-box">🚣 <strong>Takachiho-kloof</strong> — De kloof is gevormd door vulkanische lavastromen en is doordrenkt van Japanse mythologie als de afdaling van de goden. De bootsverhuur biedt een uniek laag perspectief op de watervallen.</div>
     <div class="note-box">⚠️ Reserveer het bootje van tevoren — de vraag overtreft het aanbod bij lange na. Overweeg ook de Yokagura-dansvoorstelling op het Amano Iwato Schrijn 's avonds.</div>
     <div class="hotel-tag">Kean Vacation Stay 19038</div>
+    <div class="crew-tip"><span class="crew-tip-label">&#128274; Alleen voor ons</span><br>Bootje online reserveren via takachiho-kanko.info — sloten openen <strong>enkele dagen vooraf, 's ochtends JST</strong>. Yokagura-dans: elke avond 20:00 in het Takachiho-schrijn, &yen;1.000 p.p., kaartjes aan de deur. Tanken vóór de bergwegen!</div>
     <div class="hotel-info-box">
       <div class="hotel-info-title">🏨 Kean Vacation Stay 19038</div>
       Vakantieverblijf in de omgeving van Takachiho, perfect als uitvalsbasis voor de kloof en de mythologische bezienswaardigheden in de regio. Vakantieverblijven in dit gebied zijn doorgaans authentiek en rustig gelegen — ideaal om na een dag roeien en wandelen tot rust te komen midden in de Miyazaki-hooglanden.
@@ -2038,6 +2048,7 @@ if (document.readyState === 'loading') {
     <div class="activities">Japan's snelst groeiende stad en culinaire hoofdstad van Kyushu. Slenter door Ohori Park, dwaal door het Canal City-winkelcomplex, en beleef 's avonds de legendarische Fukuoka yatai — buiteneettenten die de beroemde Hakata ramen serveren onder de sterren.</div>
     <div class="highlight-box">🍜 <strong>Fukuoka Yatai</strong> — Deze kleine open kraampjes langs de Nakasu-rivieroever en Tenjin zijn iconisch. Trek een kruk bij, bestel tonkotsu ramen en chat met locals — een typisch Japanse avond.</div>
     <div class="hotel-tag">Hotel Strata, Naha (avondvlucht)</div>
+    <div class="crew-tip"><span class="crew-tip-label">&#128274; Alleen voor ons</span><br>Yatai = <strong>alleen cash</strong>, reken &yen;1.000-2.000 p.p. Vroeg eten: vlucht om 19:50! Fukuoka Airport ligt maar <strong>2 metrohaltes (5 min)</strong> van Hakata Station — relaxed. Huurauto vóór de middag inleveren scheelt stress.</div>
     <div class="transport-tag">🚗 Auto → ✈ Avondvlucht naar Okinawa</div>
     <div class="note-box">
       ✈ <strong>NH 1217</strong> &nbsp;FUK → OKA &nbsp;·&nbsp; vertrek 19:50 · aankomst 21:30
@@ -2120,6 +2131,7 @@ if (document.readyState === 'loading') {
     <div class="highlight-box">🐠 <strong>Okinawa Snorkelen</strong> — De Kerama Eilanden, slechts 30 km voor de kust, bieden het helderste water van Japan met buitengewone koraalrif-diversiteit. Dagtochten vertrekken vanuit Naha's Tomari Haven.</div>
     <div class="note-box">🌤️ Plan A: Controleer het weerbericht — Okinawa in augustus kan buien hebben. Houd overdekte alternatieven achter de hand (Shuri Kasteel, Churaumi Aquarium) voor het geval dat.</div>
     <div class="hotel-tag">Hotel Strata Naha</div>
+    <div class="crew-tip"><span class="crew-tip-label">&#128274; Alleen voor ons</span><br>Kerama-dagtour vanaf Tomari Port: <strong>ochtendboten reserveren</strong> (bijv. via Klook), middagzon = beste snorkelzicht. Reef-safe zonnebrand verplicht meebrengen (lastig te vinden lokaal). Onze weermonitor hierboven in de gaten houden — bij tyfoonwaarschuwing varen ferry's niet.</div>
     <div class="hotel-info-box">
       <div class="hotel-info-title">🏨 Hotel Strata Naha, Okinawa</div>
       Stijlvol boetiekhotel van 4 sterren in hartje Naha, direct tegenover station Miebashi van de monorail en op 6 minuten lopen van de Kokusai Dori shoppingstraat. Ontworpen met traditionele Okinawaanse materialen en warme kleuren, met een Ryukyu-geïnspireerde binnentuin en een zwembad. Het dakterras-café op de 15e verdieping biedt een fantastisch uitzicht over de stad.
@@ -2179,6 +2191,7 @@ if (document.readyState === 'loading') {
     <div class="activities">DisneySea wordt algemeen beschouwd als het mooiste pretpark ter wereld — een adembenemend havenmeesterwerk met negen meeslepende havens. Het nieuwe Fantasy Springs-gebied, gebaseerd op Frozen, Rapunzel en Peter Pan, is een absolute must.</div>
     <div class="highlight-box">🎠 <strong>Fantasy Springs</strong> — Geopend in 2024, dit spectaculaire nieuwe land heeft drie themawerelden. Boek tickets en prioriteitspassen ruim van tevoren.</div>
     <div class="note-box">⚠️ Boek tickets online ruim van tevoren — DisneySea is regelmatig uitverkocht, zeker in augustus.</div>
+    <div class="crew-tip"><span class="crew-tip-label">&#128274; Alleen voor ons</span><br>Fantasy Springs: bij binnenkomst <strong>direct</strong> in de app een Standby Pass pakken, anders kom je het gebied niet in. Soaring en Journey to the Center of the Earth = eerste prioriteit. DPA (betaalde skip-line) voor Frozen overwegen: &yen;2.000 goed besteed.</div>
   </div>
 
   <div class="dest-card">
